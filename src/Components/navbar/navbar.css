@@ -1,0 +1,26 @@
+/* Define the default styles */
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+
+     /* Set your desired text color */
+  }
+  
+  /* Define the underline styles */
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    /* top: 2px; */
+    left: 0;
+    width: 0;
+    height: 2px; /* Set your desired underline height */
+    background-color: #07F; /* Set your desired underline color */
+    transition: width 0.3s ease; /* Set the animation duration and easing function */
+  }
+  
+  /* Apply the underline animation on hover */
+  .nav-link:hover::before {
+    width: 100%;
+  }
