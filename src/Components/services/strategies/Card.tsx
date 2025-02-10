@@ -1,9 +1,8 @@
 import Image from 'next/image';
 import React from 'react'
-// import EastIcon from "@mui/icons-material/East";
-// import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { Button } from 'antd';
- 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRightLong} from '@fortawesome/free-solid-svg-icons';
 interface getProp{
     func:(num:number)=>void;
     active:number;
@@ -52,7 +51,8 @@ const Card:React.FC<getProp> = ({func, active, ind, img, heading, desc,name, pro
       } gap-2  flex pl-0 `}
     >
       Learn more 
-      {/* <EastIcon /> */}
+      <FontAwesomeIcon icon={faArrowRightLong} />
+
     </Button>
   </div>
   )

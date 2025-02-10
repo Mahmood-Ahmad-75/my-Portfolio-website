@@ -1,8 +1,9 @@
-// import EastIcon from "@mui/icons-material/East";
-// import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+ 
 import { Button } from "antd";
 import Image from "next/image";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRightLong, faArrowLeftLong} from '@fortawesome/free-solid-svg-icons';
+ 
 interface cProp {
     active:number
     func: (num: number)=> void
@@ -12,7 +13,7 @@ interface cProp {
       func(e);
            console.log('clicked', e);
      }
-    const btnStyles: string =    "border-grey-700 text-[--color-primary]  border-[--color-primary] flex items-center justify-center focus:bg-[--color-primary] focus:text-white hover:bg-[--color-primary] hover:!text-white   w-[50px] h-[50px]";  
+    const btnStyles: string =    "border-grey-700 text-[--color-primary]  border-[--color-primary] flex items-center justify-center focus:bg-[--color-primary] focus:text-white hover:!bg-[--color-primary] hover:!text-white   w-[50px] h-[50px]";  
   
     return(
       <div className="w-full flex gap-5 md:justify-end justify-center mt-8 mb-8 px-[50px]">
@@ -24,7 +25,7 @@ interface cProp {
         className={btnStyles}
         shape="circle"
       >
-        {/* <KeyboardBackspaceIcon /> */}
+      <FontAwesomeIcon icon={faArrowLeftLong} />
       </Button>
       <Button
         autoFocus
@@ -32,8 +33,9 @@ interface cProp {
         onClick={() => handleClick(0)}
         className={btnStyles}
         shape="circle"
-      >
-        {/* <EastIcon /> */}
+      >   
+    <FontAwesomeIcon icon={faArrowRightLong} />
+
       </Button>
     </div>
     )
