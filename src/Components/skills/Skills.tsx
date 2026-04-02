@@ -16,26 +16,26 @@ import "aos/dist/aos.css"; // Add the AOS styles
 import AOS from "aos";
 const Skills = () => {
   const data: any[] = [
+    { name: "React Native", logo: react },
     { name: "React", logo: react },
-    { name: "Next.js", logo: next },
     { name: "TypeScript", logo: typescript },
     { name: "JavaScript", logo: javascript },
+    { name: "Redux Toolkit", logo: react },
+    { name: "Firebase", logo: github },
+    { name: "Git & GitHub", logo: github },
     { name: "Tailwind CSS", logo: tailwind },
-    { name: "CSS3", logo: css },
-    { name: "HTML 5", logo: html },
-    { name: "Bootstrap", logo: bootstrap },
-    { name: "GitHub", logo: react },
+    { name: "REST APIs", logo: javascript },
   ];
   useEffect(() => {
     AOS.init();
   }, []);
-  const iconStyles = "sm:w-[100px] w-[150px] sm:h-[100px] h-[150px]";
+  const iconStyles = "sm:w-[100px] w-[150px] sm:h-[100px] h-[150px] brightness-0 invert opacity-80 hover:opacity-100 transition-opacity";
   const divStyles = "flex flex-col items-center p-5";
-  const paraStyles = "text-[#555] font-semibold";
+  const paraStyles = "text-gray-300 font-semibold mt-2 text-center";
   return (
     <div 
       data-aos="zoom-in"
-      className=" mt-[80px] bg-[#F8F8F8] sm:grid grid-rows-5 lg:grid-rows-2 grid-flow-col justify-around h-auto px-5 w-full "
+      className=" mt-[80px] bg-ghost sm:grid grid-rows-5 lg:grid-rows-2 grid-flow-col justify-around h-auto px-5 w-full "
     >
       {data.map((d, ind) => {
         return (

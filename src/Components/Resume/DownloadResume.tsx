@@ -1,23 +1,10 @@
 import React from "react";
 import { Button } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
-import { resume } from "../../assets";
 
 const DownloadResume = () => {
   const handleDownload = () => {
-    const mimeType = "image/png";
-    const pngData: any = resume;
-    const blob = new Blob([pngData], { type: mimeType });
-    const url = window.URL.createObjectURL(blob);
-
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `Mahmood'sResume.png`;
-
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    window.URL.revokeObjectURL(url);
+    window.open("/Mahmood_Ahmad_CV.pdf", "_blank");
   };
   return (
     <Button

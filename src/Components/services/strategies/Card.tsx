@@ -22,7 +22,7 @@ const Card:React.FC<getProp> = ({func, active, ind, img, heading, desc,name, pro
     key={ind}
     onClick={() => func(ind)}
     className={`${
-      active === ind ? "bg-[--color-primary]" : "bg-white border"
+      active === ind ? "bg-[--color-primary]" : "bg-surface border border-gray-700"
     } cursor-pointer  p-[30px] shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] flex flex-col shrink-0 gap-5  md:w-[400px]   w-full h-[400px] rounded-md`}
   >
     <Image
@@ -32,14 +32,14 @@ const Card:React.FC<getProp> = ({func, active, ind, img, heading, desc,name, pro
     />
     <h1
       className={`${
-        active === ind ? "text-white" : "text-black"
+        active === ind ? "text-white" : "text-gray-200"
       } text-[25px]  font-semibold  h-[100px] overflow-hidden`}
     >
     {heading}
     </h1>
     <p
       className={`${
-        active === ind ? "text-white" : "text-black"
+        active === ind ? "text-white" : "text-gray-400"
       } text-[18px] leading-[28px] h-[100px] overflow-hidden font-light `}
     >
     {desc}

@@ -22,7 +22,7 @@ const Card:React.FC<getProp> = ({func, active, ind, img, heading, desc,name, pro
               key={ind}
               onClick={() => func(ind)}
               className={`${
-                active === ind ? "bg-[--color-primary]" : "bg-white border"
+                active === ind ? "bg-[--color-primary]" : "bg-surface border"
               } cursor-pointer  p-[30px] shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] flex flex-col shrink-0 gap-5 items-center md:w-[300px]   w-full h-auto rounded-md`}
             >
               <Image

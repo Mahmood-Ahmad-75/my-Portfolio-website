@@ -11,7 +11,7 @@ import myPic from "./myPic.jpg";
 import myPic2 from "./myPic2.png";
 import university from "./university.svg";
 import degree from "./degree.svg";
-import resume from "./myResumePNG.png";
+
 import backArrow from "./backArrow.svg";
 import nextArrow from "./nextArrow.svg";
 import editCardWhite from "./editCardWhite.svg";
@@ -61,7 +61,7 @@ export {
   next,
   myPic,
   myPic2,
-  resume,
+
   backArrow,
   nextArrow,
 };

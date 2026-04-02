@@ -8,7 +8,7 @@ import DownloadResume from "../Resume/DownloadResume";
 
 const Experience = () => {
   return (
-    <div className="bg-white w-full px-8 pt-[100px] flex md:flex-row flex-col gap-3  justify-around ">
+    <div className="bg-transparent w-full px-8 pt-[100px] flex md:flex-row flex-col gap-3  justify-around ">
       <div className="md:w-1/2 shrink w-full mb-5 flex flex-col items-center justify-center   ">
         {" "}
         <Image
@@ -31,15 +31,13 @@ const Experience = () => {
         </p>
 
         <h1 className="text-[--color-primary] font-bold leading-[50px] text-[50px] mb-3">
-          4+ Years Experience
+          2+ Years Experience
         </h1>
         <h3 className="text-[--color-secondary] font-bold leading-[50px] text-[50px] mb-10">
-          On Web Development
+          In Mobile Development
         </h3>
         <p className="mb-12 w-full sm:text-justify text-center text-light text-[18px] text-[--color-secondary] leading-[25px] text-light">
-          Hey there! I&apos;m <b>Mahmood Ahmad.</b>
-          I specialize in web design and development, and I&apos;m deeply passionate and committed to my craft. With
-          <b>4years+</b> of experience as a professional Web Developer.
+          Hey there! I&apos;m <b>Mahmood Ahmad.</b> I&apos;m a React Native Developer specialising in building high-performance cross-platform mobile apps for iOS and Android. With <b>2+ years</b> of hands-on experience, I work with JavaScript, TypeScript, and AI & Agentic AI integrations to deliver impactful mobile solutions.
         </p>
         <div className="flex md:flex-row flex-col w-full justify-left mt-5  ">
           <SkillSet />

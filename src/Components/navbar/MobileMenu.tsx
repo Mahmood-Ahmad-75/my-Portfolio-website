@@ -9,9 +9,9 @@ interface getProp {
 const MobileMenu: React.FC<getProp> = ({ router, clickHandler }) => {
   // styles
   const selectedStyles =
-    " text-[--color-primary] underline underline-offset-8 decoration-[1px] tracking-[2px] decoration-[#07F] ";
+    " text-[--color-primary] underline underline-offset-8 decoration-[1px] tracking-[2px] decoration-mint ";
   const styles =
-    " text-[--color-secondary] hover:cursor-pointer hover:text-[--color-primary] hover:underline hover:underline-offset-8 hover:decoration-[1px]   hover:tracking-[2px] hover:decoration-[#07F]";
+    " text-[--color-secondary] hover:cursor-pointer hover:text-[--color-primary] hover:underline hover:underline-offset-8 hover:decoration-[1px]   hover:tracking-[2px] hover:decoration-mint";
 
   return (
     <div className="list-none p-5 flex flex-col gap-5 items-start ">

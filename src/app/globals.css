@@ -1,23 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
- 
 
-/* Optionally, apply the font to the entire document or specific elements */
-body {
-    background-color: white;
+/* The new global palette for universal aesthetic switching */
+@layer base {
+  :root {
+    /* Backgrounds & Surfaces */
+    --color-obsidian: #0D0D0D;
+    --color-charcoal: #1A1A1A;
+    --color-stone: #2A2A2A;
     
- }
- body::-webkit-scrollbar {
+    /* Primary / Secondary Highlights */
+    --color-ember: #FF6B35;
+    --color-amber: #FFB347;
+    --color-spark: #FF8C42;
+    
+    /* Text & Typography */
+    --color-ivory: #F5F5F0;
+    --color-ivory-muted: #A3A3A3;
+    
+    /* Legacy Aliases for uninterrupted components */
+    --color-primary: var(--color-ember);
+    --color-secondary: var(--color-ivory);
+  }
+}
+
+body {
+  background-color: var(--color-obsidian);
+  color: var(--color-ivory);
+}
+
+body::-webkit-scrollbar {
   margin: 0;
   padding: 0;
   display: none;
 }
-@layer base {
-    :root {
-      --color-primary: #07F;
-      --color-secondary: #333333;
-      /* ... */
-    }
-  }

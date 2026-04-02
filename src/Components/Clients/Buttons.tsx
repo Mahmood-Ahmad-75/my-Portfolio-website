@@ -10,7 +10,7 @@ interface getProps {
 }
 const Buttons: React.FC<getProps> = ({ func, active }) => {
   const btnStyles: string =
-    "border-grey-700 text-[--color-primary]  border-[--color-primary] flex items-center justify-center focus:bg-[--color-primary] focus:text-white hover:bg-[--color-primary] hover:!text-white   w-[50px] h-[50px]";
+    "flex items-center justify-center w-[50px] h-[50px] !border-gray-400 !text-gray-300 hover:!bg-[--color-primary] hover:!text-white hover:!border-[--color-primary] focus:!bg-[--color-primary] focus:!text-white";
   return (
     <div className="w-full flex gap-5   justify-center mt-8 mb-8 px-[50px]">
       <Button

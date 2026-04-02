@@ -27,8 +27,7 @@ const ExploringMySkills = () => {
           </div>
 
           <p className="  w-full  text-center text-light text-[18px] text-[--color-secondary] leading-[25px] text-light">
-            We transform your ideas into a distinctive web project that both
-            inspires you and captivates your customers
+            I build high-quality, cross-platform mobile apps for iOS & Android — turning your ideas into performant, AI-powered native experiences.
           </p>
         </div>
       </div>

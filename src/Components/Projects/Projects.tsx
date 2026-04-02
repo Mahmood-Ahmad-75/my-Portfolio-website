@@ -1,23 +1,22 @@
 import ProjectImages from "./ProjectImages";
 
-   
 const Projects = () => {
-
   return (
-    <>
-      <div   data-aos="fade-up" className="w-full flex justify-center px-[50px] mb-[30px]">
-        <div className="md:w-[55%] w-full text-center mt-[100px] ">
-          <p className="text-[--color-primary] font-semibold text-[20px ] underline underline-offset-4 tracking-[2px] leading-normal mb-4">
-            PROJECTS
-          </p>
-          <h1 className="text-[--color-secondary] font-bold text-[50px] leading-[50px] mb-5">
-          Presenting My Design Portfolio and Case Studies
+    <div id="projects" className="bg-surface text-on-surface font-body w-full" data-aos="fade-up">
+      <main className="pt-32 pb-24 px-8 max-w-7xl mx-auto">
+        {/* Header Section */}
+        <header className="mb-16">
+          <h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 bg-gradient-to-br from-on-surface to-outline-variant bg-clip-text text-transparent">
+            Selected Works
           </h1>
-        </div>
-      </div>
-      <ProjectImages/>
-      
-    </>
+          <p className="font-body text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+            A curated gallery of engineering feats, ranging from specialized healthcare systems to high-performance fintech architectures.
+          </p>
+        </header>
+
+        <ProjectImages />
+      </main>
+    </div>
   );
 };
 

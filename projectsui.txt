@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects Gallery | Mahmood Ahmad</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#003840",
+              "tertiary-container": "#599cf9",
+              "on-error": "#490006",
+              "on-tertiary-fixed": "#001835",
+              "tertiary": "#70aaff",
+              "outline-variant": "#46484b",
+              "on-surface": "#f9f9fd",
+              "primary-fixed": "#00e3fd",
+              "surface-tint": "#81ecff",
+              "error-dim": "#d7383b",
+              "on-error-container": "#ffa8a3",
+              "secondary-container": "#00677d",
+              "surface-variant": "#23262a",
+              "surface-bright": "#292c31",
+              "error-container": "#9f0519",
+              "secondary-fixed": "#78dfff",
+              "primary-fixed-dim": "#00d4ec",
+              "surface": "#0c0e11",
+              "on-secondary-fixed": "#003a47",
+              "primary-container": "#00e3fd",
+              "on-secondary": "#004554",
+              "secondary-dim": "#00c6ee",
+              "on-secondary-fixed-variant": "#00586b",
+              "outline": "#747579",
+              "primary": "#81ecff",
+              "inverse-on-surface": "#535559",
+              "on-secondary-container": "#edfaff",
+              "surface-container-lowest": "#000000",
+              "on-tertiary-fixed-variant": "#003971",
+              "on-primary-fixed-variant": "#005762",
+              "secondary": "#10d5ff",
+              "tertiary-fixed-dim": "#65a4ff",
+              "surface-container-highest": "#23262a",
+              "on-surface-variant": "#aaabaf",
+              "primary-dim": "#00d4ec",
+              "on-tertiary": "#002a55",
+              "inverse-surface": "#f9f9fd",
+              "tertiary-fixed": "#80b2ff",
+              "surface-container": "#171a1d",
+              "tertiary-dim": "#5c9ffc",
+              "on-primary": "#005762",
+              "error": "#ff716c",
+              "surface-container-high": "#1d2024",
+              "on-background": "#f9f9fd",
+              "on-primary-container": "#004d57",
+              "surface-dim": "#0c0e11",
+              "background": "#0c0e11",
+              "surface-container-low": "#111417",
+              "inverse-primary": "#006976",
+              "secondary-fixed-dim": "#10d5ff",
+              "on-tertiary-container": "#001d3f"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(12, 14, 17, 0.7);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30 selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0c0e11]/70 backdrop-blur-3xl no-line-rule bg-[#111417]">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent font-['Plus_Jakarta_Sans'] tracking-tight">
+                Mahmood Ahmad
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-400 hover:text-cyan-300 transition-colors font-['Plus_Jakarta_Sans'] tracking-tight" href="#">Home</a>
+<a class="text-cyan-400 font-semibold border-b-2 border-cyan-400 pb-1 font-['Plus_Jakarta_Sans'] tracking-tight" href="#">Projects</a>
+<a class="text-slate-400 hover:text-cyan-300 transition-colors font-['Plus_Jakarta_Sans'] tracking-tight" href="#">Experience</a>
+<a class="text-slate-400 hover:text-cyan-300 transition-colors font-['Plus_Jakarta_Sans'] tracking-tight" href="#">Contact</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary font-label font-bold px-6 py-2 rounded-xl scale-95 active:scale-90 transition-transform uppercase text-sm tracking-wider">
+                Hire Me
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-16">
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 bg-gradient-to-br from-on-surface to-outline-variant bg-clip-text text-transparent">
+                Selected Works
+            </h1>
+<p class="font-body text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+                A curated gallery of engineering feats, ranging from specialized healthcare systems to high-performance fintech architectures.
+            </p>
+</header>
+<!-- Filters -->
+<div class="flex flex-wrap gap-3 mb-12">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary-container font-label text-sm font-semibold transition-all">All</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-highest text-primary-dim font-label text-sm font-semibold hover:bg-surface-variant transition-all">AI Integration</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-highest text-primary-dim font-label text-sm font-semibold hover:bg-surface-variant transition-all">Health &amp; Wellness</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-highest text-primary-dim font-label text-sm font-semibold hover:bg-surface-variant transition-all">Fintech</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-highest text-primary-dim font-label text-sm font-semibold hover:bg-surface-variant transition-all">Enterprise</button>
+</div>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project Card: MyLera -->
+<div class="group bg-surface-container rounded-xl overflow-hidden flex flex-col hover:bg-surface-container-high transition-all duration-300 transform hover:-translate-y-2">
+<div class="h-52 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="minimalist aesthetic dashboard interface with clean data visualizations and soft cyan accents on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLWcZ78TDu6GgP3hxmbTR6QJRqI11sKRu9Cmgm84-pp098bd0uZQ-kesd4KwchlcJiGKz_GvMvcieUCWlk2T54_PTJvHqdqYTGNQdLxHdstyhw-ga66WSWV9a_WJzN8Xf61XtE4YUS9WbP0TAi5HmbhZSOs_aZBMkClXoi3XI_FtHoqNN-zLaiAwtqxYvAAF3ilM1AI1jPS3HMxuEZfj-4LeXF0gXrcN5ZhSicYsoRM_kMgEFe66rzDvOCcv6INX5WaRJQaDb7s3QI"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex gap-2 mb-4">
+<span class="font-label text-xs font-semibold px-3 py-1 bg-surface-container-highest text-primary-dim rounded-full">AI Integration</span>
+<span class="font-label text-xs font-semibold px-3 py-1 bg-surface-container-highest text-primary-dim rounded-full">Health</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">MyLera</h3>
+<p class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed">Advanced healthcare diagnostic platform leveraging AI for predictive patient analysis and streamlined clinical workflows.</p>
+<div class="mt-auto">
+<button class="w-full py-3 rounded-lg border border-outline-variant/20 text-primary font-label text-sm font-bold tracking-widest uppercase hover:bg-primary/10 transition-colors">
+                            View Case Study
+                        </button>
+</div>
+</div>
+</div>
+<!-- Project Card: Pharmed Pulse -->
+<div class="group bg-surface-container rounded-xl overflow-hidden flex flex-col hover:bg-surface-container-high transition-all duration-300 transform hover:-translate-y-2">
+<div class="h-52 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="close-up of digital pharmaceutical logistics tracking system with neon blue highlights and sleek glass texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEQMcx6I9lnTej2OVpMtmu8t9TX8Ao-SxOicPQDfMfsYFX9fAxm4Lj42Yz-rW2vvXGRPXaEAy1NUIt3UxR09V1VMoTLBi_Dpn0XEH_Pjwgh4uZf8FVxo19r_itsOism-A-dDe1fuxAi9XuCA2kZmtfJ37jE4qjBsJjBaOrxfkS9yBMeHCl5EqpkmecSXcw20RWRaWLtyY5wvZxtk6gqU-XGmo1iYJH5SOlOEB5-e_x64alrdfkggoTBpLNmlgGEOdrc4e87YUlsUcD"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex gap-2 mb-4">
+<span class="font-label text-xs font-semibold px-3 py-1 bg-surface-container-highest text-primary-dim rounded-full">Enterprise</span>
+<span class="font-label text-xs font-semibold px-3 py-1 bg-surface-container-highest text-primary-dim rounded-full">Health</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">Pharmed Pulse</h3>
+<p class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed">Real-time pharmaceutical supply chain management system with end-to-end inventory visibility and predictive restocking.</p>
+<div class="mt-auto">
+<button class="w-full py-3 rounded-lg border border-outline-variant/20 text-primary font-label text-sm font-bold tracking-widest uppercase hover:bg-primary/10 transition-colors">
+                            View Case Study
+                        </button>
+</div>
+</div>
+</div>
+<!-- Project Card: Ventally -->
+<div class="group bg-surface-container rounded-xl overflow-hidden flex flex-col hover:bg-surface-container-high transition-all duration-300 transform hover:-translate-y-2">
+<div class="h-52 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="abstract geometric pattern representing respiratory ventilation systems with clean white lines on deep blue background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD49m88B2mZKv3tbBNYXGL0vmilfeRuVxyuVF9GlDuI9C-0kjoWYHh67j7Q5Wk-1xZyN09WAHNAiu3nZuAADTvcpFXsSMAWy2KRdZpgsHL3EYStG27hv4v0tig3TtARsC2gKF5BXLV2A__UU2gr1mczY9YNFlvSew_7NZnjSNng1A9mZL_u3Vq9jbtdS3_UFSoXX53cnl9Jj9dpBHqn4xKL12YSBC1vH3sTNSVM0PSFQBmJwqiRR-8sFePokSP6OlG1Yjz_PL16LVXk"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex gap-2 mb-4">
+<span class="font-label text-xs font-semibold px-3 py-1 bg-surface-container-highest text-primary-dim rounded-full">Health Tech</span>
+<span class="font-label text-xs font-semibold px-3 py-1 bg-surface-container-highest text-primary-dim rounded-full">IoT</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">Ventally</h3>
+<p class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed">Cloud-connected respiratory monitoring interface designed for critical care environments and remote patient tracking.</p>
+<div class="mt-auto">
+<button class="w-full py-3 rounded-lg border border-outline-variant/20 text-primary font-label text-sm font-bold tracking-widest uppercase hover:bg-primary/10 transition-colors">
+                            View Project Details
+                        </button>
+</div>
+</div>
+</div>
+<!-- Project Card: ULEXE -->
+<div class="group bg-surface-container rounded-xl overflow-hidden flex flex-col hover:bg-surface-container-high transition-all duration-300 transform hover:-translate-y-2">
+<div class="h-52 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="futuristic digital currency exchange interface with complex data density and glowing holographic elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBip8Km4M05J2I7d25oQe2X8naN4ggHVurNq5ui8U_Z2Vr-BqfUwUTZXI6ZpRsftS9osnT9UfI63hUst2g3vrq-7jMbUJxfhGZnd86rI1JCMlX_4TuxHkb6X_DgJSMJ9jbgvBxWe41sxGiljJhpHyTMkg_-CNiZVHx77YZtGyQmTWV3kjXD7xSgRZ9Tv3EtdSaBkjU7OcgXfDP2gWjWGCk-xIqOg9NWGf2i84ZE2wF3DDgwG2wMBlBlPxx_DycFz8lo6dg8YEkfXUSr"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex gap-2 mb-4">
+<span class="font-label text-xs font-semibold px-3 py-1 bg-surface-container-highest text-primary-dim rounded-full">Fintech</span>
+<span class="font-label text-xs font-semibold px-3 py-1 bg-surface-container-highest text-primary-dim rounded-full">Web3</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">ULEXE</h3>
+<p class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed">High-frequency trading platform built with low-latency architecture and institutional-grade security protocols.</p>
+<div class="mt-auto">
+<button class="w-full py-3 rounded-lg border border-outline-variant/20 text-primary font-label text-sm font-bold tracking-widest uppercase hover:bg-primary/10 transition-colors">
+                            View Case Study
+                        </button>
+</div>
+</div>
+</div>
+<!-- Project Card: Inventory Management -->
+<div class="group bg-surface-container rounded-xl overflow-hidden flex flex-col hover:bg-surface-container-high transition-all duration-300 transform hover:-translate-y-2">
+<div class="h-52 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="organized warehouse industrial setting with soft focal blur and high-tech digital overlay for item tracking" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjQRxRiaVLhubfnvsgn8XdKPvJHYZWJ-FVlbvtaQHXyPMNG2k0DqcZa5NggxJtt6KFIOQLQ3lKaXB_g2qQwHLczyxFg9FftVq2NxGn-Ame6dc5xzyA4Xr-KTWnDcl5b0TGzaWV0d4VSKI0iNWWc9fgKfk4RQ3N2ggiiYNQ5Y8IgodDYGghHkZyd75R0U27Iy4Ca7xQAavyn4Tl-aqPOicS6zT-L_9AMHXJCNdscUgOlox-XYicwGKwk6RBczIA-_4TuWEodqZt8tSc"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex gap-2 mb-4">
+<span class="font-label text-xs font-semibold px-3 py-1 bg-surface-container-highest text-primary-dim rounded-full">Enterprise</span>
+<span class="font-label text-xs font-semibold px-3 py-1 bg-surface-container-highest text-primary-dim rounded-full">Saas</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">Inventory Management</h3>
+<p class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed">Scalable ERP solution for mid-to-large scale distributors featuring automated ledger reconciliation.</p>
+<div class="mt-auto">
+<button class="w-full py-3 rounded-lg border border-outline-variant/20 text-primary font-label text-sm font-bold tracking-widest uppercase hover:bg-primary/10 transition-colors">
+                            View Project Details
+                        </button>
+</div>
+</div>
+</div>
+<!-- Project Card: CTLFX -->
+<div class="group bg-surface-container rounded-xl overflow-hidden flex flex-col hover:bg-surface-container-high transition-all duration-300 transform hover:-translate-y-2">
+<div class="h-52 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="creative studio software workspace with timeline view and complex nodal editing graph in dark mode" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBAIAiu0y7WjGLkv4J_PMPdv_vlEeSlSk0rACcVpEjGZ4PdLhOkyDJ0b6fc5Ij95toxmqTyU-dinlEvZ9KMyD-ZIeglWg-4XwI2p59dy-dxieWkpNnOBr7fQDMqABdy7-eUHRnkDLVfaDeiw6r61tEgjDWK79MdupkUJdmSGoUCRmZUwtv_7DAFsKFKJv9c0RK8yBcaXt_SIu_ehpHYwOMz5aGWOW7jm1nvABr3xziodvUpFvy0Oc0pb1xjK0BcdATqXaYjSpm8EHY"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex gap-2 mb-4">
+<span class="font-label text-xs font-semibold px-3 py-1 bg-surface-container-highest text-primary-dim rounded-full">Creative</span>
+<span class="font-label text-xs font-semibold px-3 py-1 bg-surface-container-highest text-primary-dim rounded-full">Cloud</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">CTLFX</h3>
+<p class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed">Cloud-based video rendering engine optimized for remote production teams and collaborative workflows.</p>
+<div class="mt-auto">
+<button class="w-full py-3 rounded-lg border border-outline-variant/20 text-primary font-label text-sm font-bold tracking-widest uppercase hover:bg-primary/10 transition-colors">
+                            View Case Study
+                        </button>
+</div>
+</div>
+</div>
+<!-- Project Card: Project Runner -->
+<div class="group bg-surface-container rounded-xl overflow-hidden flex flex-col hover:bg-surface-container-high transition-all duration-300 transform hover:-translate-y-2">
+<div class="h-52 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="top-down view of organized project management cards and kanban board on a digital tablet with sleek stylus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx8HaEIlzQ5lpHsPmjHYA-s5h_uMRPPAWvSYhqOBkdWGaImkCb8E1ySbfGRj0PBVk6_d8LQHqdvJwC0tcHPsI-C9a1_nbSfD9ezGYwjVQ4rdz_c2D-5iQ7leT49rAGUS2fam04zC5R545e0PDsHvvChZAjKV9noDzVYXwGImDefoPBE6cqf2mMw_q5QFt6aj520ifDdrxoIWffIRe3liVh1dwHcPieaxZcCvnjKe5c2owpn5CXlpqXpEN6IH-F99ejB3awA6ZJ8NR5"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex gap-2 mb-4">
+<span class="font-label text-xs font-semibold px-3 py-1 bg-surface-container-highest text-primary-dim rounded-full">Productivity</span>
+<span class="font-label text-xs font-semibold px-3 py-1 bg-surface-container-highest text-primary-dim rounded-full">AI</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">Project Runner</h3>
+<p class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed">Agile delivery accelerator that automates ticket prioritization and sprint planning using machine learning.</p>
+<div class="mt-auto">
+<button class="w-full py-3 rounded-lg border border-outline-variant/20 text-primary font-label text-sm font-bold tracking-widest uppercase hover:bg-primary/10 transition-colors">
+                            View Case Study
+                        </button>
+</div>
+</div>
+</div>
+<!-- Project Card: Shoppeo -->
+<div class="group bg-surface-container rounded-xl overflow-hidden flex flex-col hover:bg-surface-container-high transition-all duration-300 transform hover:-translate-y-2">
+<div class="h-52 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="premium luxury e-commerce landing page featuring high-fashion photography and elegant typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNQSL82PFzCCLOuNQgL7YgX12Q7OFFuApNM-q3XHgCC2RTFdewuVGdbV8yde-WQum4maoRGBC_riTXFBKGN_waOO-wnjGafgG3IDA8KHeuzWQV3ssVW3qMl1REM7XvhXnNHxtGtGK4D07gsBIdYIPrPO3MQXTkWMPDOA2pkcKVhMQsNuxziTNgIJJM_hjbTZ-K-ZVEHvksgq0z93vEmHLmQtOqqgs6sr2ufscqQCJaeavj9KIsyUvEZuYFNErdBlm8evw61TUsFyh-"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex gap-2 mb-4">
+<span class="font-label text-xs font-semibold px-3 py-1 bg-surface-container-highest text-primary-dim rounded-full">E-commerce</span>
+<span class="font-label text-xs font-semibold px-3 py-1 bg-surface-container-highest text-primary-dim rounded-full">B2C</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">Shoppeo</h3>
+<p class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed">Boutique e-commerce framework with specialized headless architecture and high-conversion checkout flows.</p>
+<div class="mt-auto">
+<button class="w-full py-3 rounded-lg border border-outline-variant/20 text-primary font-label text-sm font-bold tracking-widest uppercase hover:bg-primary/10 transition-colors">
+                            View Project Details
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0c0e11] w-full py-12 border-t border-white/5 tonal-shift from surface to surface-container-low">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto space-y-4 md:space-y-0">
+<div class="font-['Inter'] text-sm text-slate-500">
+                © 2024 Mahmood Ahmad. Built with Kinetic Precision.
+            </div>
+<div class="flex space-x-8">
+<a class="text-slate-500 hover:text-cyan-400 transition-colors font-['Inter'] text-sm opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="text-slate-500 hover:text-cyan-400 transition-colors font-['Inter'] text-sm opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="text-slate-500 hover:text-cyan-400 transition-colors font-['Inter'] text-sm opacity-80 hover:opacity-100" href="#">Twitter</a>
+<a class="text-slate-500 hover:text-cyan-400 transition-colors font-['Inter'] text-sm opacity-80 hover:opacity-100" href="#">Source</a>
+</div>
+</div>
+</footer>
+</body></html>

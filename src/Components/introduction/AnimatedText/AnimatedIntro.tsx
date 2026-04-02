@@ -4,7 +4,7 @@ import "./animated.scss";
 import { Button } from "antd";
 import {nextArrow as ArrowDownwardIcon} from '@/assets';
 const AnimatedIntro = () => {
-  const words = ['Web Developer.', 'Web Designer.', 'Frontend Developer.', 'MERN Stack Developer.', 'Application Developer.'];
+  const words = ['React Native Developer.', 'Mobile App Developer.', 'iOS & Android Engineer.', 'AI Integration Specialist.', 'Cross-Platform Developer.'];
   let i = 0;
   let offset = 0;
   const len = words.length;
@@ -72,10 +72,10 @@ const AnimatedIntro = () => {
   return (
     <main className="container flex flex-col">
       <p className="text-[--color-primary] text-[20px] font-bold">HEY! I AM</p>
-      <h1 className="text-black text-[70px] font-bold">Mahmood Ahmad</h1>
+      <h1 className="text-white text-[70px] font-bold">Mahmood Ahmad</h1>
       <div className="flex gap-1">
-        <h2 className="text-black font-bold text-[35px]">I&apos;m a</h2>
-        <div className="animated-text text-[--color-primary] font-bold text-[35px] underline"></div><p className="self-start">|</p>
+        <h2 className="text-white font-bold text-[35px]">I&apos;m a</h2>
+        <div className="animated-text text-[--color-primary] font-bold text-[35px] underline"></div><p className="self-start text-white text-[35px]">|</p>
       </div>
       <div className="w-[50px] h-[100px]  flex justify-center items-center">
         <Button onClick={handleClick} type='link' shape='circle' className='btnAnimation '>

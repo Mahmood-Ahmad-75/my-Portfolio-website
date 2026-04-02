@@ -1,7 +1,7 @@
 import React from "react";
 import { university, degree } from "../../../assets";
 import Image from "next/image";
-import Degree from "./Degree";
+
 university;
 const Education = () => {
   return (
@@ -34,7 +34,7 @@ const Education = () => {
         </p>
 
       </div>
-      <div className="self-center">  <Degree /></div>
+
 
     </div>
   );

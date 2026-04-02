@@ -87,15 +87,15 @@ const styles =
   return (
     <div
       ref={ref}
-      className="flex z-50 w-full bg-white fixed shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] flex-col  px-8  justify-center  "
+      className="flex z-50 w-full bg-[#1A1A1A] border-b border-[#2A2A2A] fixed shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] flex-col  px-8  justify-center  "
     >
       <div className="w-full py-2 flex justify-between gap-5 self-center  h-auto">
         <div
           onClick={() => handleLinkClick("home")}
-          className="    h-full flex-0 flex  items-center   gap-1"
+          className="    h-full flex-0 flex  items-center   gap-1 cursor-pointer"
         >
           <Image width={50} alt="company" src={logo} />
-          <h6 className="font-Zen Kaku Gothic Antique  text-[24px] text-[#333] font-black">
+          <h6 className="font-Zen Kaku Gothic Antique  text-[24px] text-white font-black">
             icmoSoft
           </h6>{" "}
         </div>
@@ -150,13 +150,13 @@ const styles =
           style={{ color: "black" }}
           type="link"
           onClick={() => setHam(!ham)}
-          className="md:hidden flex hover:bg-slate-100 text-[--color-secondary] items-center self-center justify-center  text-white"
+          className="md:hidden flex hover:bg-surface text-[--color-secondary] items-center self-center justify-center  text-white"
         >
           {ham ? <CloseOutlined /> : <Hamburger />}
         </Button>
       </div>
       {ham && (
-        <div className="md:hidden  w-full mt-3 bg-white rounded-md flex items-center justify-center">
+        <div className="md:hidden  w-full mt-3 bg-surface rounded-md flex items-center justify-center">
           <MobileMenu clickHandler={handleLinkClick} router={router} />
         </div>
       )}

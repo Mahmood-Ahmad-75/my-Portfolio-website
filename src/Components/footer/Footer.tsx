@@ -15,13 +15,13 @@ const Footer = () => {
           icmoSoft
           </h6>{" "}
         </div>
-        <p className="text-[#79B2F2] text-[16px] leading-[16px]">
+        <p className="text-teal text-[16px] leading-[16px]">
           © Copyright 2023. All Rights Reserved.
         </p>
       </div>
 
       <div className="flex gap-2 items-center">
-        <p className="text-[18px] text-[#79B2F2] leading-[18px] font-semibold">
+        <p className="text-[18px] text-teal leading-[18px] font-semibold">
           FOLLOW US: {"  "}
         </p>
         {/* <Link  href={'https://web.facebook.com/mahmood.ahmad1222/'}>

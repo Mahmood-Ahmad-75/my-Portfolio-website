@@ -79,7 +79,7 @@ const ConsultForm = () => {
         </Form.Item>
 
         <Form.Item  >
-          <Button  className="self-left rounded-full bg-[#00489A] text-[20px] text-white px-[33px] h-[50px] sm:w-[180px] w-full flex justify-center items-center"  type="primary" htmlType="submit">
+          <Button  className="self-left rounded-full bg-mint text-[20px] text-white px-[33px] h-[50px] sm:w-[180px] w-full flex justify-center items-center"  type="primary" htmlType="submit">
             Submit
           </Button>
         </Form.Item>

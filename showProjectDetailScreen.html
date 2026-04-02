@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MyLera Project Details | Mahmood Ahmad</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space_Grotesk:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-on-surface": "#535559",
+                        "surface-container": "#171a1d",
+                        "primary-dim": "#00d4ec",
+                        "on-secondary-fixed-variant": "#00586b",
+                        "primary-fixed": "#00e3fd",
+                        "on-tertiary-fixed-variant": "#003971",
+                        "on-primary-fixed": "#003840",
+                        "surface-bright": "#292c31",
+                        "secondary-container": "#00677d",
+                        "on-primary": "#005762",
+                        "surface-variant": "#23262a",
+                        "surface": "#0c0e11",
+                        "on-background": "#f9f9fd",
+                        "tertiary-dim": "#5c9ffc",
+                        "on-surface": "#f9f9fd",
+                        "on-primary-container": "#004d57",
+                        "error-container": "#9f0519",
+                        "on-tertiary-container": "#001d3f",
+                        "tertiary-fixed-dim": "#65a4ff",
+                        "on-tertiary": "#002a55",
+                        "error-dim": "#d7383b",
+                        "tertiary-fixed": "#80b2ff",
+                        "surface-container-low": "#111417",
+                        "on-secondary-container": "#edfaff",
+                        "surface-container-highest": "#23262a",
+                        "primary-container": "#00e3fd",
+                        "outline": "#747579",
+                        "surface-container-lowest": "#000000",
+                        "on-tertiary-fixed": "#001835",
+                        "secondary-fixed-dim": "#10d5ff",
+                        "on-error": "#490006",
+                        "on-primary-fixed-variant": "#005762",
+                        "surface-dim": "#0c0e11",
+                        "secondary": "#10d5ff",
+                        "inverse-primary": "#006976",
+                        "inverse-surface": "#f9f9fd",
+                        "on-surface-variant": "#aaabaf",
+                        "error": "#ff716c",
+                        "on-secondary-fixed": "#003a47",
+                        "tertiary": "#70aaff",
+                        "primary-fixed-dim": "#00d4ec",
+                        "tertiary-container": "#599cf9",
+                        "secondary-fixed": "#78dfff",
+                        "on-error-container": "#ffa8a3",
+                        "outline-variant": "#46484b",
+                        "secondary-dim": "#00c6ee",
+                        "on-secondary": "#004554",
+                        "background": "#0c0e11",
+                        "surface-tint": "#81ecff",
+                        "primary": "#81ecff",
+                        "surface-container-high": "#1d2024"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-nav {
+            background: rgba(12, 14, 17, 0.7);
+            backdrop-filter: blur(24px);
+        }
+
+        .text-gradient {
+            background: linear-gradient(45deg, #81ecff, #10d5ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+    <!-- TopNavBar - Mapping JSON style keys -->
+    <nav class="fixed top-0 w-full z-50 bg-[#0c0e11]/70 backdrop-blur-xl no-border">
+        <div
+            class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] tracking-tight">
+            <div class="text-xl font-bold tracking-tighter text-[#00E5FF]">Mahmood Ahmad</div>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="text-slate-400 hover:text-white transition-colors" href="#">Experience</a>
+                <a class="text-[#00E5FF] font-semibold border-b-2 border-[#00E5FF] pb-1" href="#">Projects</a>
+                <a class="text-slate-400 hover:text-white transition-colors" href="#">Contact</a>
+                <button
+                    class="bg-gradient-to-r from-primary to-secondary text-on-primary-fixed px-6 py-2 rounded-xl font-bold text-xs uppercase tracking-widest hover:scale-95 transition-all duration-200">
+                    Let's Talk
+                </button>
+            </div>
+            <!-- Mobile Toggle Placeholder -->
+            <div class="md:hidden">
+                <span class="material-symbols-outlined text-primary">menu</span>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-24 pb-20 max-w-7xl mx-auto px-6 md:px-12">
+        <!-- Back Link -->
+        <a class="inline-flex items-center gap-2 text-primary hover:text-primary-dim transition-colors mb-12 group"
+            href="#">
+            <span class="material-symbols-outlined group-hover:-translate-x-1 transition-transform">arrow_back</span>
+            <span class="font-label text-sm uppercase tracking-widest">Back to Projects</span>
+        </a>
+        <!-- Hero Section -->
+        <header class="grid lg:grid-cols-2 gap-12 items-center mb-24">
+            <div>
+                <span class="font-label text-xs uppercase tracking-[0.3em] text-primary mb-4 block">Case Study • Fitness
+                    Tech</span>
+                <h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter mb-6">
+                    MyLera <span class="text-gradient">App</span>
+                </h1>
+                <p class="text-on-surface-variant text-lg leading-relaxed mb-8 max-w-xl">
+                    A hyper-personalized fitness and wellness ecosystem leveraging generative AI to bridge the gap
+                    between static workout plans and dynamic human health data.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <span
+                        class="bg-surface-container-highest text-primary-dim px-4 py-1.5 rounded-full font-label text-xs">React
+                        Native</span>
+                    <span
+                        class="bg-surface-container-highest text-primary-dim px-4 py-1.5 rounded-full font-label text-xs">Firebase</span>
+                    <span
+                        class="bg-surface-container-highest text-primary-dim px-4 py-1.5 rounded-full font-label text-xs">GPT-4
+                        API</span>
+                    <span
+                        class="bg-surface-container-highest text-primary-dim px-4 py-1.5 rounded-full font-label text-xs">Redux
+                        Toolkit</span>
+                </div>
+            </div>
+            <div class="relative group">
+                <div
+                    class="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 blur-2xl rounded-3xl opacity-50 group-hover:opacity-100 transition duration-1000">
+                </div>
+                <img alt="MyLera App Interface"
+                    class="relative rounded-3xl w-full h-[500px] object-cover object-center border border-outline-variant/20 shadow-2xl"
+                    data-alt="high-end minimalist mobile app interface showing fitness tracking charts and AI coaching chat on a sleek dark smartphone mockup"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkvv8N1bOt3vzTHnw1BdLr7_J0O9dtH2FxPuYaPeAbfMuNtwqML6Y_HZ5EpAiY5VIy7YXXlfX1ngQEhZXbQ9V_uk64i5Nrq09Zxdsd2YYNtbsKiQ5_2rFjN9kyF0xiW-X3QuxeQxTEIG44yg_r70M0DPxHv0UyiZ8d_KFEsL7d6uYysEwFubkJrQvah5nwCuHG_IyoWXebQqYysBdANQB-_xPCA3Ywm6Tzd769NKfKkbGaRbbVAJDYkQg0mWw2fqgud89oelL7OHdJ" />
+            </div>
+        </header>
+        <!-- Problem / Solution Bento -->
+        <section class="grid md:grid-cols-3 gap-6 mb-24">
+            <div class="md:col-span-2 bg-surface-container-low p-10 rounded-3xl relative overflow-hidden group">
+                <div class="relative z-10">
+                    <h3 class="font-headline text-2xl font-bold mb-4">The Challenge</h3>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        Most fitness applications offer "one-size-fits-all" routines that fail to adapt to a user's
+                        real-time physiological state, leading to plateaued progress or injury. The market lacked a
+                        solution that could synthesize sleep data, heart rate variability, and nutritional intake into
+                        actionable, conversational coaching.
+                    </p>
+                </div>
+                <span
+                    class="material-symbols-outlined absolute -bottom-4 -right-4 text-9xl text-surface-variant/20 select-none">troubleshoot</span>
+            </div>
+            <div class="bg-gradient-to-br from-primary/10 to-secondary/10 p-10 rounded-3xl border border-primary/20">
+                <h3 class="font-headline text-2xl font-bold mb-4 text-primary">The Impact</h3>
+                <div class="space-y-6">
+                    <div>
+                        <div class="text-3xl font-black font-headline">94%</div>
+                        <div class="text-xs font-label uppercase text-on-surface-variant tracking-tighter">User
+                            Retention Rate</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-black font-headline">12ms</div>
+                        <div class="text-xs font-label uppercase text-on-surface-variant tracking-tighter">API Response
+                            Latency</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Key Features Asymmetric Grid -->
+        <section class="mb-24">
+            <h2 class="font-headline text-3xl font-bold mb-12 flex items-center gap-4">
+                Core Architecture <div class="h-px grow bg-outline-variant/20"></div>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-12">
+                    <div class="group">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-surface transition-all duration-300">
+                            <span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+                        </div>
+                        <h4 class="font-headline text-xl font-bold mb-3">GPT API Integration</h4>
+                        <p class="text-on-surface-variant leading-relaxed">
+                            Implemented a custom prompt engineering layer for GPT-4 to act as a certified personal
+                            trainer. The system analyzes historical user data and current goals to generate dynamic meal
+                            plans and workout adjustments in natural language.
+                        </p>
+                    </div>
+                    <div class="group">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-surface transition-all duration-300">
+                            <span class="material-symbols-outlined" data-icon="sync_alt">sync_alt</span>
+                        </div>
+                        <h4 class="font-headline text-xl font-bold mb-3">Health Data Syncing</h4>
+                        <p class="text-on-surface-variant leading-relaxed">
+                            Real-time bidirectional syncing with Apple HealthKit and Google Fit. Engineered a robust
+                            data ingestion pipeline that normalizes various health metrics into a unified schema for the
+                            AI engine.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-surface-container rounded-3xl p-8 relative overflow-hidden">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-secondary">
+                            <span class="material-symbols-outlined" data-icon="trophy">trophy</span>
+                        </div>
+                        <h4 class="font-headline text-xl font-bold">Challenge System</h4>
+                    </div>
+                    <p class="text-on-surface-variant leading-relaxed mb-8">
+                        Social gamification engine built on Firebase Cloud Functions. Users can create private groups,
+                        compete in real-time step challenges, and earn "Kudos" backed by a custom reward logic.
+                    </p>
+                    <img alt="Fitness Community"
+                        class="rounded-2xl w-full h-48 object-cover border border-outline-variant/10"
+                        data-alt="dramatic wide shot of professional athletes training in a moody high-tech gym with neon cyan lighting accents"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnrD0vetU8JHnj5mX5cslfs9aK_726-eXqxRiDiHgHyOQQTjb5hgx7gpO4FrUgOeNKfL8Vx8NjcIT-7BNa7WKiQ4kIHOA28tkVLEmBYAtUH0OrF4tYJ1EvANTstQ0iEM2OJ-sAPZNxHPyAZfERviu92htztUPRS2z8xKxfIKcjPiVShS58zebLRaLxCSsfpAm5cuRant1YFRfpwaZGV-0f2_MEPlTgcN6LjFEE2hqS81ylCDIKGxgjweKb9RyVFJft68c3tBzlqGWX" />
+                </div>
+            </div>
+        </section>
+        <!-- Tech Stack & Stats -->
+        <section class="bg-surface-container-low rounded-[2rem] p-8 md:p-16 mb-24">
+            <div class="grid lg:grid-cols-4 gap-12">
+                <div class="lg:col-span-1">
+                    <h3 class="font-headline text-2xl font-bold mb-6">The Stack</h3>
+                    <ul class="space-y-4 font-label text-sm uppercase tracking-wider text-on-surface-variant">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                            React Native / Expo</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                            Firebase Auth &amp; Firestore</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                            Node.js / Express</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                            OpenAI SDK</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                            Tailwind CSS</li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-3 grid md:grid-cols-3 gap-8">
+                    <div
+                        class="p-8 rounded-2xl bg-surface-container border border-outline-variant/10 flex flex-col justify-between">
+                        <span class="material-symbols-outlined text-primary mb-4" data-icon="speed">speed</span>
+                        <div>
+                            <div class="text-4xl font-bold mb-1 tracking-tighter">99.9%</div>
+                            <p class="text-on-surface-variant text-xs font-label uppercase">Uptime Reliability</p>
+                        </div>
+                    </div>
+                    <div
+                        class="p-8 rounded-2xl bg-surface-container border border-outline-variant/10 flex flex-col justify-between">
+                        <span class="material-symbols-outlined text-primary mb-4" data-icon="memory">memory</span>
+                        <div>
+                            <div class="text-4xl font-bold mb-1 tracking-tighter">4.2s</div>
+                            <p class="text-on-surface-variant text-xs font-label uppercase">Avg Session Depth</p>
+                        </div>
+                    </div>
+                    <div
+                        class="p-8 rounded-2xl bg-surface-container border border-outline-variant/10 flex flex-col justify-between">
+                        <span class="material-symbols-outlined text-primary mb-4"
+                            data-icon="cloud_done">cloud_done</span>
+                        <div>
+                            <div class="text-4xl font-bold mb-1 tracking-tighter">200k+</div>
+                            <p class="text-on-surface-variant text-xs font-label uppercase">Health Records Synced</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA / Footer Navigation -->
+        <section class="text-center py-20 border-t border-outline-variant/10">
+            <h2 class="font-headline text-4xl font-bold mb-8">Ready to build something similar?</h2>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <button
+                    class="bg-gradient-to-r from-primary to-secondary text-on-primary-fixed px-10 py-4 rounded-xl font-bold text-sm uppercase tracking-widest hover:scale-105 transition-all">
+                    Start a Conversation
+                </button>
+                <a class="px-10 py-4 rounded-xl border border-outline-variant/30 text-on-surface font-bold text-sm uppercase tracking-widest hover:bg-surface-container transition-all"
+                    href="#">
+                    View Other Projects
+                </a>
+            </div>
+        </section>
+    </main>
+    <!-- Footer - Mapping JSON style keys -->
+    <footer class="w-full py-12 border-t border-[#46484b]/10 bg-[#0c0e11]">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-8 w-full font-['Space_Grotesk'] text-xs uppercase tracking-widest">
+            <p class="text-slate-500 mb-6 md:mb-0">© 2024 Mahmood Ahmad. Built with Kinetic Architect logic.</p>
+            <div class="flex gap-8">
+                <a class="text-slate-500 hover:text-[#81ecff] transition-colors" href="#">LinkedIn</a>
+                <a class="text-slate-500 hover:text-[#81ecff] transition-colors" href="#">GitHub</a>
+                <a class="text-slate-500 hover:text-[#81ecff] transition-colors" href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+    <!-- SideNavBar - Suppressed for Project Detail as per "Destination Rule" & focus flow -->
+</body>
+
+</html>
