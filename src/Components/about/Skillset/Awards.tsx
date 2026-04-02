@@ -1,7 +1,7 @@
 import React from "react";
 import { university, degree } from "../../../assets";
 import Image from "next/image";
-import Degree from "./Degree";
+
 const Awards = () => {
   return (
     <div data-aos='zoom-in-down' className="w-full p-4 flex flex-col">
@@ -32,7 +32,7 @@ const Awards = () => {
   &quot;Bachelor of Science in Computer Science&quot;
 </p>
       </div>
-       <div  className="self-center">  <Degree/></div>
+
      
     </div>
   )
