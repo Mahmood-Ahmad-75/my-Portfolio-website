@@ -1,3 +1,12 @@
+import project1Img from "../assets/p1.png";
+import project2Img from "../assets/p2.png";
+import project3Img from "../assets/p3.png";
+import project4Img from "../assets/p4.png";
+import project5Img from "../assets/p5.png";
+import project6Img from "../assets/p6.png";
+
+export type Platform = "mobile" | "web";
+
 export interface ProjectStats {
   icon: string;
   value: string;
@@ -42,6 +51,7 @@ export interface ProjectDetail {
   imgSrc: string;
   liveUrl: string;
 
+  platform: Platform;
   types: ProjectType[];
 
   challenge: string;
@@ -73,6 +83,7 @@ export const projectsData: ProjectDetail[] = [
     imgSrc:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBLWcZ78TDu6GgP3hxmbTR6QJRqI11sKRu9Cmgm84-pp098bd0uZQ-kesd4KwchlcJiGKz_GvMvcieUCWlk2T54_PTJvHqdqYTGNQdLxHdstyhw-ga66WSWV9a_WJzN8Xf61XtE4YUS9WbP0TAi5HmbhZSOs_aZBMkClXoi3XI_FtHoqNN-zLaiAwtqxYvAAF3ilM1AI1jPS3HMxuEZfj-4LeXF0gXrcN5ZhSicYsoRM_kMgEFe66rzDvOCcv6INX5WaRJQaDb7s3QI",
     liveUrl: "#",
+    platform: "mobile",
     types: ["Mobile", "Full Stack", "AI-Integrated"],
     challenge:
       "Most fitness apps offer generic routines that fail to adapt to a user's real-time health state. We needed to synthesize iOS HealthKit and Android health data into actionable, LLM-powered coaching that monitors vitals and flags imbalances conversationally.",
@@ -168,6 +179,7 @@ export const projectsData: ProjectDetail[] = [
     imgSrc:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDEQMcx6I9lnTej2OVpMtmu8t9TX8Ao-SxOicPQDfMfsYFX9fAxm4Lj42Yz-rW2vvXGRPXaEAy1NUIt3UxR09V1VMoTLBi_Dpn0XEH_Pjwgh4uZf8FVxo19r_itsOism-A-dDe1fuxAi9XuCA2kZmtfJ37jE4qjBsJjBaOrxfkS9yBMeHCl5EqpkmecSXcw20RWRaWLtyY5wvZxtk6gqU-XGmo1iYJH5SOlOEB5-e_x64alrdfkggoTBpLNmlgGEOdrc4e87YUlsUcD",
     liveUrl: "#",
+    platform: "mobile",
     types: ["Mobile", "Full Stack", "AI-Integrated"],
     challenge:
       "Pharmaceutical interactions require precise, AI-assisted communication between patients and providers. The app needed automated scheduling logic, real-time chat, and speech-to-speech voice interactions — all working seamlessly on iOS and Android without leaking clinical context across users.",
@@ -260,6 +272,7 @@ export const projectsData: ProjectDetail[] = [
     imgSrc:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuD49m88B2mZKv3tbBNYXGL0vmilfeRuVxyuVF9GlDuI9C-0kjoWYHh67j7Q5Wk-1xZyN09WAHNAiu3nZuAADTvcpFXsSMAWy2KRdZpgsHL3EYStG27hv4v0tig3TtARsC2gKF5BXLV2A__UU2gr1mczY9YNFlvSew_7NZnjSNng1A9mZL_u3Vq9jbtdS3_UFSoXX53cnl9Jj9dpBHqn4xKL12YSBC1vH3sTNSVM0PSFQBmJwqiRR-8sFePokSP6OlG1Yjz_PL16LVXk",
     liveUrl: "#",
+    platform: "mobile",
     types: ["Mobile", "Full Stack", "AI-Integrated"],
     challenge:
       "Mental health apps need delicate, privacy-first UX with rich emotional tracking. The challenge was building intuitive mood-logging flows, meaningful trend visualizations, and real-time peer support — layered with an AI journaling companion that never oversteps clinical boundaries.",
@@ -354,6 +367,7 @@ export const projectsData: ProjectDetail[] = [
     imgSrc:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuCjQRxRiaVLhubfnvsgn8XdKPvJHYZWJ-FVlbvtaQHXyPMNG2k0DqcZa5NggxJtt6KFIOQLQ3lKaXB_g2qQwHLczyxFg9FftVq2NxGn-Ame6dc5xzyA4Xr-KTWnDcl5b0TGzaWV0d4VSKI0iNWWc9fgKfk4RQ3N2ggiiYNQ5Y8IgodDYGghHkZyd75R0U27Iy4Ca7xQAavyn4Tl-aqPOicS6zT-L_9AMHXJCNdscUgOlox-XYicwGKwk6RBczIA-_4TuWEodqZt8tSc",
     liveUrl: "#",
+    platform: "mobile",
     types: ["Mobile", "Full Stack", "AI-Integrated"],
     challenge:
       "Building a single mobile app serving two distinct user roles (wholesalers and retailers) with strict access boundaries, inventory visibility controls, and a secure payment flow required careful architecture for RBAC, state isolation, and audit-safe inventory events.",
@@ -439,6 +453,7 @@ export const projectsData: ProjectDetail[] = [
     imgSrc:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBip8Km4M05J2I7d25oQe2X8naN4ggHVurNq5ui8U_Z2Vr-BqfUwUTZXI6ZpRsftS9osnT9UfI63hUst2g3vrq-7jMbUJxfhGZnd86rI1JCMlX_4TuxHkb6X_DgJSMJ9jbgvBxWe41sxGiljJhpHyTMkg_-CNiZVHx77YZtGyQmTWV3kjXD7xSgRZ9Tv3EtdSaBkjU7OcgXfDP2gWjWGCk-xIqOg9NWGf2i84ZE2wF3DDgwG2wMBlBlPxx_DycFz8lo6dg8YEkfXUSr",
     liveUrl: "#",
+    platform: "mobile",
     types: ["Mobile", "Full Stack", "AI-Integrated"],
     challenge:
       "Users needed an intuitive way to find nearby salons, browse services, check availability, and book appointments — all within a map-first mobile experience that stays responsive offline and matches intent ('a cut before Friday near me') to real inventory.",
@@ -508,6 +523,7 @@ export const projectsData: ProjectDetail[] = [
     imgSrc:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDBAIAiu0y7WjGLkv4J_PMPdv_vlEeSlSk0rACcVpEjGZ4PdLhOkyDJ0b6fc5Ij95toxmqTyU-dinlEvZ9KMyD-ZIeglWg-4XwI2p59dy-dxieWkpNnOBr7fQDMqABdy7-eUHRnkDLVfaDeiw6r61tEgjDWK79MdupkUJdmSGoUCRmZUwtv_7DAFsKFKJv9c0RK8yBcaXt_SIu_ehpHYwOMz5aGWOW7jm1nvABr3xziodvUpFvy0Oc0pb1xjK0BcdATqXaYjSpm8EHY",
     liveUrl: "#",
+    platform: "mobile",
     types: ["Mobile", "Full Stack", "AI-Integrated"],
     challenge:
       "Trading apps demand ultra-precise financial calculations, secure wallet management, and real-time currency conversion — layered with clear, non-advisory explanations of user P&L that inspire trust without crossing into financial advice.",
@@ -577,6 +593,7 @@ export const projectsData: ProjectDetail[] = [
     imgSrc:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuCx8HaEIlzQ5lpHsPmjHYA-s5h_uMRPPAWvSYhqOBkdWGaImkCb8E1ySbfGRj0PBVk6_d8LQHqdvJwC0tcHPsI-C9a1_nbSfD9ezGYwjVQ4rdz_c2D-5iQ7leT49rAGUS2fam04zC5R545e0PDsHvvChZAjKV9noDzVYXwGImDefoPBE6cqf2mMw_q5QFt6aj520ifDdrxoIWffIRe3liVh1dwHcPieaxZcCvnjKe5c2owpn5CXlpqXpEN6IH-F99ejB3awA6ZJ8NR5",
     liveUrl: "#",
+    platform: "mobile",
     types: ["Mobile", "Full Stack", "AI-Integrated"],
     challenge:
       "Construction field teams needed a mobile-first tool to manage tasks, assign materials to specific workers, and map job sites accurately — without relying on constant internet connectivity and with minimal typing on-site.",
@@ -646,6 +663,7 @@ export const projectsData: ProjectDetail[] = [
     imgSrc:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDNQSL82PFzCCLOuNQgL7YgX12Q7OFFuApNM-q3XHgCC2RTFdewuVGdbV8yde-WQum4maoRGBC_riTXFBKGN_waOO-wnjGafgG3IDA8KHeuzWQV3ssVW3qMl1REM7XvhXnNHxtGtGK4D07gsBIdYIPrPO3MQXTkWMPDOA2pkcKVhMQsNuxziTNgIJJM_hjbTZ-K-ZVEHvksgq0z93vEmHLmQtOqqgs6sr2ufscqQCJaeavj9KIsyUvEZuYFNErdBlm8evw61TUsFyh-",
     liveUrl: "#",
+    platform: "mobile",
     types: ["Mobile", "Full Stack", "AI-Integrated"],
     challenge:
       "A single app serving buyers and sellers required isolated navigation stacks, role-specific dashboards, and a unified order-management layer keeping both in sync without data leakage between roles.",
@@ -712,76 +730,268 @@ export const projectsData: ProjectDetail[] = [
   },
   {
     id: 9,
-    title: "Frontend Engineering Sandbox",
-    subtitle: "Case Study • Web Frontend Foundation",
+    title: "Burger Shope",
+    subtitle: "Case Study • React Web · F&B E-Commerce",
     heroHighlight: "Web",
     heroDescription:
-      "A consolidated showcase of React.js, Next.js, Redux, TypeScript, and Tailwind foundations — Burger Shop, a Figma homepage build, and multiple Redux/React demos, with an embedded LLM UI copilot.",
-    tags: ["Web", "Full Stack", "AI Integration", "Creative", "React", "Next.js", "Tailwind"],
-    imgSrc:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDnrD0vetU8JHnj5mX5cslfs9aK_726-eXqxRiDiHgHyOQQTjb5hgx7gpO4FrUgOeNKfL8Vx8NjcIT-7BNa7WKiQ4kIHOA28tkVLEmBYAtUH0OrF4tYJ1EvANTstQ0iEM2OJ-sAPZNxHPyAZfERviu92htztUPRS2z8xKxfIKcjPiVShS58zebLRaLxCSsfpAm5cuRant1YFRfpwaZGV-0f2_MEPlTgcN6LjFEE2hqS81ylCDIKGxgjweKb9RyVFJft68c3tBzlqGWX",
+      "A React-based food e-commerce web app with a polished product catalog, cart state management, and responsive Tailwind UI — deployed on Vercel.",
+    tags: ["Web", "Full Stack", "AI Integration", "Creative", "React", "Tailwind"],
+    imgSrc: project2Img.src,
     liveUrl: "https://burger-shope.vercel.app/",
+    platform: "web",
     types: ["Web", "Full Stack", "AI-Integrated"],
     challenge:
-      "Demonstrate fluency with the core web frontend stack that underpins all mobile and AI work — componentization, state, routing, SSR, and styling — as a single coherent surface rather than six disconnected demos.",
-    impactScore1: "6",
-    impactLabel1: "Deployed Web Builds",
-    impactScore2: "LLM",
-    impactLabel2: "UI Copilot Integration",
+      "Deliver a performant, component-driven React storefront with clean cart state, responsive layout, and fast production-grade hosting — as a foundation that later scales into React Native commerce flows.",
+    impactScore1: "Vercel",
+    impactLabel1: "Production Deployment",
+    impactScore2: "Responsive",
+    impactLabel2: "Mobile-First UI",
     architecture: [
       {
         icon: "widgets",
         title: "Component-Driven React",
         description:
-          "Strict component-driven architecture with typed props, colocated styles, and Redux Toolkit for shared state — the same patterns scaled later into the React Native case studies."
+          "Typed, reusable product cards, cart drawer, and checkout components with colocated Tailwind styles — the same patterns later scaled into the React Native commerce flows."
       },
       {
-        icon: "bolt",
-        title: "Next.js SSR + Routing",
+        icon: "shopping_cart",
+        title: "Cart State Management",
         description:
-          "Next.js App Router for SSR, image optimization, and SEO — used for the Figma homepage build and this portfolio itself."
+          "Centralized cart state with add/remove/quantity reducers, persisted across navigation and validated at checkout submission."
       },
       {
         icon: "palette",
         title: "Tailwind Design System",
         description:
-          "Utility-first Tailwind with a custom design-token layer for consistent typography, spacing, and theme tokens across every demo."
+          "Utility-first Tailwind with a consistent token set for typography, spacing, and color — the same design-token approach applied across the portfolio."
       }
     ],
-    stack: ["React", "Next.js", "Redux Toolkit", "TypeScript", "Tailwind CSS", "Ant Design"],
+    stack: ["React", "JavaScript", "Tailwind CSS", "Vercel"],
     techStack: {
-      frontend: ["React", "Next.js (App Router)", "Redux Toolkit", "TypeScript", "Tailwind CSS", "Ant Design"],
-      backend: ["Node.js LLM proxy (for UI copilot)", "REST endpoints"],
-      devops: ["Vercel (primary)", "Netlify (legacy demos)", "GitHub Actions"],
+      frontend: ["React", "JavaScript", "Tailwind CSS", "Responsive layout"],
+      backend: ["Node.js order endpoint (stub)", "REST API"],
+      devops: ["Vercel (primary)", "GitHub Actions"],
       ai: [
-        "LLM UI copilot (component-aware Q&A)",
-        "Prompt engineering with page context"
+        "LLM menu-description assistant",
+        "Prompt-engineered SEO copy for items"
       ]
     },
     stats: [
       { icon: "public", value: "Vercel", label: "Primary Hosting" },
-      { icon: "memory", value: "Redux", label: "State Management" },
-      { icon: "speed", value: "SSR", label: "Next.js Rendering" }
+      { icon: "shopping_bag", value: "Cart", label: "Stateful Checkout" },
+      { icon: "devices", value: "Responsive", label: "Mobile + Desktop" }
     ],
     aiCapabilities: [
       {
-        icon: "chat",
-        title: "LLM UI Copilot",
+        icon: "edit_note",
+        title: "LLM Menu Copy Assistant",
         description:
-          "An embedded assistant that answers component-level questions about the live demo, grounded by the current page context — practical, on-site LLM integration rather than decorative."
-      },
-      {
-        icon: "code",
-        title: "Prompt-Engineered Explanations",
-        description:
-          "Context-aware prompts that summarize the component tree or Redux slice relevant to whatever the user is looking at."
+          "Optional LLM helper that generates SEO-friendly item titles and descriptions from a few seller-provided attributes — prompt-engineered to stay concise and on-brand."
       }
     ],
     contribution:
-      "Authored all six web demos, consolidated them into a single coherent case study, and wired the LLM UI copilot through a Node.js proxy that attaches page context to each prompt.",
+      "Authored all React components, cart reducers, Tailwind styles, and the Vercel deployment pipeline.",
     deployment:
-      "Primary surface on Vercel (Burger Shop, Figma homepage, this portfolio). Legacy demos on Netlify. LLM copilot proxy on Render.",
+      "Deployed on Vercel with zero-config CI from GitHub. Environment-scoped config for API stubs.",
     outcome:
-      "A single coherent web foundation story — the same patterns that scale up into the eight mobile case studies above."
+      "A clean, production-hosted React commerce surface demonstrating the component + state patterns that scale into React Native commerce apps."
+  },
+  {
+    id: 10,
+    title: "Figma Homepage Build",
+    subtitle: "Case Study • Next.js · Landing Page",
+    heroHighlight: "Build",
+    heroDescription:
+      "A pixel-faithful Next.js implementation of a Figma marketing homepage — SSR-rendered, SEO-optimized, and responsive, deployed on Netlify.",
+    tags: ["Web", "Full Stack", "AI Integration", "Creative", "Next.js", "Tailwind"],
+    imgSrc: project6Img.src,
+    liveUrl: "https://figma-home-page-creation.netlify.app/",
+    platform: "web",
+    types: ["Web", "Full Stack", "AI-Integrated"],
+    challenge:
+      "Translate a detailed Figma homepage into a production-grade Next.js build with SSR, SEO metadata, responsive breakpoints, and image optimization — pixel-faithful to the designer's intent.",
+    impactScore1: "SSR",
+    impactLabel1: "Next.js Rendering",
+    impactScore2: "1:1",
+    impactLabel2: "Design Fidelity",
+    architecture: [
+      {
+        icon: "bolt",
+        title: "Next.js SSR + Routing",
+        description:
+          "Next.js with SSR for first-paint performance, automatic code splitting, and built-in SEO metadata — the same foundation this portfolio is built on."
+      },
+      {
+        icon: "image",
+        title: "Image Optimization",
+        description:
+          "next/image with responsive sizes, lazy loading, and format negotiation for fast LCP across devices."
+      },
+      {
+        icon: "design_services",
+        title: "Figma → Code Fidelity",
+        description:
+          "Strict design-token alignment with Figma: spacing, typography, and color values audited 1:1 against the source file."
+      }
+    ],
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Netlify"],
+    techStack: {
+      frontend: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Responsive layout"],
+      backend: ["Node.js contact endpoint (stub)"],
+      devops: ["Netlify", "GitHub Actions"],
+      ai: [
+        "LLM hero-copy generator (prompt-engineered)",
+        "Design-token audit prompts"
+      ]
+    },
+    stats: [
+      { icon: "speed", value: "SSR", label: "Server Rendering" },
+      { icon: "public", value: "Netlify", label: "Deployment" },
+      { icon: "design_services", value: "Figma", label: "Design Source" }
+    ],
+    aiCapabilities: [
+      {
+        icon: "auto_awesome",
+        title: "LLM Hero-Copy Generator",
+        description:
+          "Prompt-engineered helper for generating and A/B testing marketing hero copy given brand voice and a target audience."
+      }
+    ],
+    contribution:
+      "Implemented the full Next.js build, design-token system, and Netlify deployment from the Figma source.",
+    deployment:
+      "Netlify with automatic previews per PR and production-grade SSR rendering.",
+    outcome:
+      "A pixel-faithful, SSR-rendered marketing page demonstrating production Next.js fluency."
+  },
+  {
+    id: 11,
+    title: "Redux Commerce Demo",
+    subtitle: "Case Study • Redux Toolkit · State Management",
+    heroHighlight: "Demo",
+    heroDescription:
+      "A Redux Toolkit reference implementation with normalized store, typed selectors, and async thunks — the state-management foundation used across every mobile case study.",
+    tags: ["Web", "Full Stack", "AI Integration", "Creative", "React", "Redux"],
+    imgSrc: project1Img.src,
+    liveUrl: "https://stupendous-cat-15da4d.netlify.app/",
+    platform: "web",
+    types: ["Web", "Full Stack"],
+    challenge:
+      "Show disciplined state management at scale — normalized entities, typed selectors, async thunks, and predictable mutations — on a small surface that cleanly generalizes to large apps.",
+    impactScore1: "Redux",
+    impactLabel1: "Toolkit Slices",
+    impactScore2: "Typed",
+    impactLabel2: "Selector Discipline",
+    architecture: [
+      {
+        icon: "hub",
+        title: "Normalized Store",
+        description:
+          "Entities normalized by id with adapter helpers, preventing duplication and enabling O(1) lookups."
+      },
+      {
+        icon: "sync",
+        title: "Async Thunks",
+        description:
+          "All network effects modeled as createAsyncThunk with pending/fulfilled/rejected handling in slice extraReducers."
+      },
+      {
+        icon: "shield",
+        title: "Typed Selectors",
+        description:
+          "Memoized selectors with exact return types — the same selector discipline enforced across the React Native case studies."
+      }
+    ],
+    stack: ["React", "Redux Toolkit", "JavaScript", "Netlify"],
+    techStack: {
+      frontend: ["React", "Redux Toolkit", "JavaScript", "Tailwind CSS"],
+      backend: ["REST API (mock)"],
+      devops: ["Netlify", "GitHub Actions"],
+      ai: [
+        "LLM state-debugging assistant (describe current slice state)",
+        "Prompt-engineered action-log summarization"
+      ]
+    },
+    stats: [
+      { icon: "memory", value: "Redux", label: "Toolkit" },
+      { icon: "speed", value: "O(1)", label: "Normalized Lookups" },
+      { icon: "public", value: "Netlify", label: "Hosting" }
+    ],
+    aiCapabilities: [
+      {
+        icon: "psychology",
+        title: "State-Debugging Assistant (experimental)",
+        description:
+          "Optional LLM helper that ingests the current Redux store snapshot and summarizes what changed and why — prompt-engineered for deterministic diffs."
+      }
+    ],
+    contribution:
+      "Authored the entire slice architecture, adapter normalization, async thunks, and Netlify deployment.",
+    deployment:
+      "Netlify hosting with GitHub-driven CI.",
+    outcome:
+      "Reference implementation for the Redux patterns reused across every mobile case study in this portfolio."
+  },
+  {
+    id: 12,
+    title: "React Dashboard UI",
+    subtitle: "Case Study • React · Interface Patterns",
+    heroHighlight: "Dashboard",
+    heroDescription:
+      "A React dashboard showcase with composable layout, stateful UI patterns, and responsive design — deployed on Netlify.",
+    tags: ["Web", "Full Stack", "AI Integration", "Creative", "React"],
+    imgSrc: project3Img.src,
+    liveUrl: "https://graceful-cendol-e9e10d.netlify.app/",
+    platform: "web",
+    types: ["Web", "Full Stack"],
+    challenge:
+      "Demonstrate composable dashboard patterns — layout primitives, stateful widgets, and responsive behavior — as a reusable foundation for admin surfaces in larger products.",
+    impactScore1: "Composable",
+    impactLabel1: "Layout Primitives",
+    impactScore2: "Responsive",
+    impactLabel2: "Breakpoint Strategy",
+    architecture: [
+      {
+        icon: "dashboard",
+        title: "Composable Layout",
+        description:
+          "Dashboard shell built from reusable layout primitives (grid, sidebar, topbar) — pluggable across surfaces."
+      },
+      {
+        icon: "tune",
+        title: "Stateful Widgets",
+        description:
+          "Chart and list widgets with internal state and typed props, isolated from the global store."
+      }
+    ],
+    stack: ["React", "JavaScript", "CSS Modules", "Netlify"],
+    techStack: {
+      frontend: ["React", "JavaScript", "CSS Modules", "Responsive layout"],
+      backend: ["REST API (mock)"],
+      devops: ["Netlify", "GitHub Actions"],
+      ai: [
+        "LLM dashboard-narration assistant",
+        "Prompt-engineered KPI summarization"
+      ]
+    },
+    stats: [
+      { icon: "space_dashboard", value: "Composable", label: "Layout" },
+      { icon: "devices", value: "Responsive", label: "Breakpoints" },
+      { icon: "public", value: "Netlify", label: "Hosting" }
+    ],
+    aiCapabilities: [
+      {
+        icon: "insights",
+        title: "LLM KPI Narration",
+        description:
+          "Optional assistant that turns dashboard KPIs into plain-language summaries — prompt-engineered to avoid overclaiming trends."
+      }
+    ],
+    contribution:
+      "Authored the layout primitives, dashboard widgets, and Netlify deployment pipeline.",
+    deployment:
+      "Netlify with GitHub-driven CI and automatic preview builds.",
+    outcome:
+      "A reusable dashboard pattern set that generalizes to admin surfaces across products."
   }
 ];
