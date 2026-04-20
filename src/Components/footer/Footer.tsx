@@ -11,12 +11,12 @@ const Footer = () => {
       <div className="flex md:flex-row flex-col justify-center  gap-5 items-center">
         <div className="  h-full flex-0 flex   items-center   gap-1">
           <Image width={50} alt="company" src={logo} />
-          <h6 className="font-Zen Kaku Gothic Antique  text-[25px] leading-[25px] text-white font-black">
-          icmoSoft
-          </h6>{" "}
+          <h6 className="text-[25px] leading-[25px] text-white font-black tracking-widest uppercase">
+            CognitiveStack<span className="text-[--color-ember]">.</span>
+          </h6>
         </div>
         <p className="text-teal text-[16px] leading-[16px]">
-          © Copyright 2023. All Rights Reserved.
+          © {new Date().getFullYear()} CognitiveStack. All Rights Reserved.
         </p>
       </div>
 

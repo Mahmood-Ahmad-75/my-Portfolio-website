@@ -82,8 +82,8 @@ const AnimatedIntro = () => {
     <section className="relative w-full min-h-[calc(100vh-120px)] pt-[150px] md:pt-[180px] pb-10 bg-black glint-topo overflow-hidden">
       {/* Giant watermark behind subject */}
       <div className="absolute inset-0 hidden lg:flex items-center justify-end pointer-events-none">
-        <span className="glint-watermark text-[18rem] xl:text-[22rem] leading-none whitespace-nowrap pr-4 -mr-16">
-          MAHMOOD
+        <span className="glint-watermark text-[14rem] xl:text-[18rem] leading-none whitespace-nowrap pr-4 -mr-16 tracking-tighter">
+          COGNITIVESTACK
         </span>
       </div>
 

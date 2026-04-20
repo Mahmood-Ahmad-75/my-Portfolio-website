@@ -6,8 +6,9 @@ import NavBar from "@/Components/navbar/NavBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Web developer",
-  description: "React Developer",
+  title: "CognitiveStack — Full Stack + AI Engineering",
+  description:
+    "CognitiveStack — Full Stack + AI-integrated engineering. React, React Native, Node.js, and LLM / STS / TTS systems, shipped in production.",
 };
 
 export default function RootLayout({

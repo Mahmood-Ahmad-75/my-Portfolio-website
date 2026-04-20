@@ -70,7 +70,7 @@ const NavBar = () => {
           >
             <Image width={38} height={38} alt="logo" src={logo} />
             <span className="text-white text-xl font-black tracking-widest uppercase">
-              Mahmood<span className="text-[--color-ember]">.</span>
+              CognitiveStack<span className="text-[--color-ember]">.</span>
             </span>
           </div>
 
