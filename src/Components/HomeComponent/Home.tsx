@@ -14,7 +14,6 @@ import WhyToChooseUs from "../qualitiesSection/WhyToChooseUs";
 import Projects from "../Projects/Projects";
 import Clients from "../Clients/Clients";
 import ContactUs from "../ContactUs/ContactUs";
-import Resume from "../Resume/Resume";
 import { Button, FloatButton } from "antd";
 import { whatsapp } from "@/assets";
 import Image from "next/image";
@@ -54,9 +53,6 @@ const Home: React.FC = () => {
         <Skills />
       </div>
       <CareerExperience />
-      <div id="resume">
-        <Resume />
-      </div>
 
       <div id="services">
         <ExploringMySkills />

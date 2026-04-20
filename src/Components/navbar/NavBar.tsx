@@ -16,7 +16,6 @@ const NavBar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const homeSection = document.getElementById("home");
-      const resumeSection = document.getElementById("resume");
       const aboutSection = document.getElementById("about");
       const servicesSection = document.getElementById("services");
       const contactSection = document.getElementById("contact");
@@ -27,8 +26,6 @@ const NavBar = () => {
         setRouter("home");
       } else if (aboutSection && scrollPosition < aboutSection.offsetTop + aboutSection.offsetHeight) {
         setRouter("about");
-      } else if (resumeSection && scrollPosition < resumeSection.offsetTop + resumeSection.offsetHeight) {
-        setRouter("resume");
       } else if (servicesSection && scrollPosition < servicesSection.offsetTop + servicesSection.offsetHeight) {
         setRouter("services");
       } else if (ProjectsSection && scrollPosition < ProjectsSection.offsetTop + ProjectsSection.offsetHeight) {

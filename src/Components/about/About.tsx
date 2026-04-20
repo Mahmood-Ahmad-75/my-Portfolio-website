@@ -1,10 +1,7 @@
 import React from "react";
-import { Button } from "antd";
-import { DownloadOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import { myPic2 } from "../../assets";
 import SkillSet from "./SkillSet";
-import DownloadResume from "../Resume/DownloadResume";
 
 const Experience = () => {
   return (
@@ -19,8 +16,6 @@ const Experience = () => {
           src={myPic2}
           alt="my-Profile-pic"
         />
-        <DownloadResume />
-
       </div>
       <div
         data-aos="zoom-in-left"
