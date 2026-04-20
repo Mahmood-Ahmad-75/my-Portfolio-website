@@ -4,7 +4,7 @@ import SectionHeader from "../common/SectionHeader";
 
 const ContactUsHeading = () => {
   return (
-    <div className="max-w-[1600px] mx-auto px-6 md:px-16 pt-20">
+    <div className="max-w-[1600px] mx-auto px-6 md:px-16 pt-12">
       <SectionHeader
         label="Contact Me"
         titleLead="Let's Build"

@@ -23,8 +23,11 @@ const Skills = () => {
     { name: "Redux Toolkit", logo: react },
     { name: "Firebase", logo: github },
     { name: "LLM / GPT APIs", logo: javascript },
-    { name: "STS / TTS Voice", logo: javascript },
+    { name: "STT / TTS Voice", logo: javascript },
+    { name: "DevOps / CI-CD", logo: tailwind },
     { name: "Tailwind CSS", logo: tailwind },
+    { name: "Docker", logo: javascript },
+    { name: "AWS / Vercel", logo: next },
   ];
   useEffect(() => {
     AOS.init();
@@ -35,7 +38,7 @@ const Skills = () => {
   return (
     <div 
       data-aos="zoom-in"
-      className=" mt-[80px] bg-ghost sm:grid grid-rows-5 lg:grid-rows-2 grid-flow-col justify-around h-auto px-5 w-full "
+      className="mt-8 bg-ghost sm:grid grid-rows-4 lg:grid-rows-2 grid-flow-col justify-around h-auto px-5 w-full"
     >
       {data.map((d, ind) => {
         return (

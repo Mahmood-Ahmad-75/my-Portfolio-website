@@ -42,7 +42,7 @@ const tiers: Tier[] = [
   {
     name: "Hourly",
     tagline: "Best For Small Scopes",
-    price: "$45",
+    price: "$20",
     period: "Per Hour",
     icon: HourlyIcon,
     features: [
@@ -56,7 +56,7 @@ const tiers: Tier[] = [
   {
     name: "Monthly Retainer",
     tagline: "Best For Ongoing Products",
-    price: "$5,500",
+    price: "$2,500",
     period: "Per Month",
     icon: RetainerIcon,
     features: [
@@ -188,7 +188,7 @@ const PricingCard: React.FC<{ tier: Tier }> = ({ tier }) => {
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="relative w-full bg-black py-24 md:py-32 overflow-hidden">
+    <section id="pricing" className="relative w-full bg-black py-16 md:py-20 overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-16">
         <SectionHeader
           label="Specifications"

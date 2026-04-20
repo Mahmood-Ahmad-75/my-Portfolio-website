@@ -7,7 +7,7 @@ import github from "./github.svg";
 import bootstrap from "./bootstrap.svg";
 import next from "./next.svg";
 import react from "./react.svg";
-import myPic from "./myPic.jpg";
+import myPic from "./myPic.png";
 import myPic2 from "./myPic2.png";
 import university from "./university.svg";
 import degree from "./degree.svg";
@@ -29,7 +29,7 @@ import typescript from "./typescript.svg";
 import background from "./background.jpg";
 import whatsapp from "./whatsapp.svg";
 import shahan from "./shahan.jpg";
-import logo from "./logo.svg";
+import logo from "./logo.png";
 
 export {
   logo,

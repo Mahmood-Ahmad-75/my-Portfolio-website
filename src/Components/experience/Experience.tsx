@@ -51,7 +51,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="relative w-full bg-black py-24 md:py-32 overflow-hidden"
+      className="relative w-full bg-black py-16 md:py-20 overflow-hidden"
     >
       <div className="max-w-[1600px] mx-auto px-6 md:px-16">
         <SectionHeader
@@ -63,7 +63,7 @@ const Experience = () => {
         />
 
         {/* Experience cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {experienceEntries.map((entry, idx) => (
             <div
               key={idx}

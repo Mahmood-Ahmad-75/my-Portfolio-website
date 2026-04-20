@@ -23,7 +23,7 @@ const slides: Slide[] = [
       "Eight production iOS + Android case studies with Redux Toolkit, Firebase, Stripe, and Maps — from fitness coaching to B2B inventory and fintech wallets.",
   },
   {
-    accent: "LLM · STS · TTS",
+    accent: "LLM · STT · TTS",
     rest: "AI INTEGRATION",
     quote:
       "Speech-to-speech agents, text-to-speech with same-voice consistency, and prompt-engineered guardrails — AI as an architectural layer, not a demo gimmick.",
@@ -40,14 +40,13 @@ const AnimatedIntro = () => {
   const [index, setIndex] = useState(0);
   const [phase, setPhase] = useState<"in" | "out">("in");
 
-  // Auto-advance with fade-out then swap then fade-in
   useEffect(() => {
     const tick = setInterval(() => {
       setPhase("out");
       setTimeout(() => {
         setIndex((i) => (i + 1) % slides.length);
         setPhase("in");
-      }, 450); // match transition duration
+      }, 400);
     }, 5000);
     return () => clearInterval(tick);
   }, []);
@@ -62,13 +61,10 @@ const AnimatedIntro = () => {
   };
 
   const handleProjects = () => {
-    const el = document.getElementById("projects");
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
   };
-
-  const handleAbout = () => {
-    const el = document.getElementById("about");
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+  const handleContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
   const current = slides[index];
@@ -79,26 +75,52 @@ const AnimatedIntro = () => {
       : "opacity-0 -translate-y-4 transition-all duration-300 ease-in";
 
   return (
-    <section className="relative w-full min-h-[calc(100vh-120px)] pt-[150px] md:pt-[180px] pb-10 bg-black glint-topo overflow-hidden">
-      {/* Giant watermark behind subject */}
-      <div className="absolute inset-0 hidden lg:flex items-center justify-end pointer-events-none">
-        <span className="glint-watermark text-[14rem] xl:text-[18rem] leading-none whitespace-nowrap pr-4 -mr-16 tracking-tighter">
+    <section className="relative w-full h-screen pt-[140px] md:pt-[160px] pb-16 bg-black glint-topo overflow-hidden flex items-center">
+
+      {/* Giant watermark */}
+      <div className="absolute inset-0 hidden lg:flex items-center justify-end pointer-events-none overflow-hidden">
+        <span className="glint-watermark text-[12rem] xl:text-[16rem] leading-none whitespace-nowrap pr-4 tracking-tighter">
           COGNITIVESTACK
         </span>
       </div>
 
-      <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 grid lg:grid-cols-[1.2fr_1fr] gap-10 items-center">
-        {/* Left: copy */}
-        <div className="relative z-10 order-2 lg:order-1">
-          <p className="text-[--color-ember] font-bold tracking-[0.3em] text-sm mb-4 uppercase">
+      <div className="relative max-w-[1600px] mx-auto px-6 md:px-16 w-full h-full grid lg:grid-cols-[3fr_2fr] gap-8 items-stretch">
+
+        {/* LEFT: copy — fixed height, no reflow */}
+        <div className="relative z-10 flex flex-col justify-center h-full">
+
+          {/* Slide counter */}
+          <div className="flex items-center gap-3 mb-8">
+            <span className="text-[--color-ember] font-black text-sm tabular-nums">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <div className="flex gap-1.5">
+              {slides.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => go(i)}
+                  aria-label={`Slide ${i + 1}`}
+                  className={`h-[3px] rounded-full transition-all duration-300 ${
+                    i === index ? "w-10 bg-[--color-ember]" : "w-4 bg-white/20 hover:bg-white/40"
+                  }`}
+                />
+              ))}
+            </div>
+            <span className="text-white/30 font-black text-sm tabular-nums">
+              {String(slides.length).padStart(2, "0")}
+            </span>
+          </div>
+
+          {/* Label */}
+          <p className="text-[--color-ember] font-bold tracking-[0.3em] text-sm mb-6 uppercase">
             Hey! I am Mahmood Ahmad
           </p>
 
-          {/* Animated headline wrapper — fixed min-height so layout doesn't jump */}
-          <div className="min-h-[240px] md:min-h-[300px] xl:min-h-[360px] mb-6">
+          {/* Animated headline — fixed height so layout never shifts */}
+          <div className="h-[160px] mb-6 overflow-hidden">
             <h1
               key={`h-${index}-${phase}`}
-              className={`glint-headline text-5xl md:text-7xl xl:text-8xl text-white ${slideAnim}`}
+              className={`glint-headline text-[clamp(2.8rem,5.5vw,5.5rem)] leading-[1.0] text-white ${slideAnim}`}
             >
               <span className="glint-accent">{current.accent}</span>
               <br />
@@ -106,10 +128,11 @@ const AnimatedIntro = () => {
             </h1>
           </div>
 
-          <div className="min-h-[120px] mb-10">
+          {/* Animated quote — fixed height */}
+          <div className="h-[100px] mb-12 overflow-hidden">
             <div
               key={`q-${index}-${phase}`}
-              className={`border-l-2 border-[--color-ember] pl-5 max-w-xl ${slideAnim}`}
+              className={`border-l-2 border-[--color-ember] pl-5 ${slideAnim}`}
             >
               <p className="text-white/70 text-base md:text-lg leading-relaxed">
                 {current.quote}
@@ -117,7 +140,8 @@ const AnimatedIntro = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4">
+          {/* CTAs */}
+          <div className="flex flex-wrap items-center gap-4 mb-16">
             <button
               onClick={handleProjects}
               className="group bg-[--color-ember] hover:bg-[--color-spark] text-black font-black uppercase tracking-widest text-sm px-8 py-4 flex items-center gap-4 transition-colors"
@@ -128,50 +152,47 @@ const AnimatedIntro = () => {
               </span>
             </button>
             <button
-              onClick={handleAbout}
-              className="border border-white/20 hover:border-[--color-ember] text-white font-bold uppercase tracking-widest text-sm px-8 py-4 transition-colors"
+              onClick={handleContact}
+              className="border border-white/20 hover:border-[--color-ember] text-white hover:text-[--color-ember] font-bold uppercase tracking-widest text-sm px-8 py-4 transition-colors"
             >
-              About Me
+              Let's Talk
             </button>
           </div>
-        </div>
 
-        {/* Right: portrait — Glint-style full image (no circle) */}
-        <div className="relative z-10 order-1 lg:order-2 flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-[520px]">
-            {/* Soft green ambient glow behind image */}
-            <div className="absolute -inset-8 bg-[--color-ember]/15 blur-[80px] rounded-full" />
-
-            {/* Portrait — full shape, no circular frame */}
-            <div className="relative h-[480px] md:h-[580px] lg:h-[640px] w-full">
-              <Image
-                src={myPic2}
-                alt="Mahmood Ahmad"
-                fill
-                className="object-contain object-bottom"
-                priority
-              />
-            </div>
-
-            {/* Slide indicator dots */}
-            <div className="absolute -right-2 md:right-2 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-10">
-              {slides.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => go(i)}
-                  aria-label={`Slide ${i + 1}`}
-                  className={`w-10 h-10 rounded-full border-2 flex items-center justify-center text-xs font-bold transition-all ${
-                    i === index
-                      ? "border-[--color-ember] text-[--color-ember] bg-black/60 scale-110"
-                      : "border-white/15 text-white/40 hover:border-white/40"
-                  }`}
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </button>
-              ))}
-            </div>
+          {/* Stats bar */}
+          <div className="pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { num: "3+", label: "Years Experience" },
+              { num: "15+", label: "Projects Shipped" },
+              { num: "5+", label: "AI Integrations" },
+              { num: "3+", label: "DevOps Pipelines" },
+            ].map((s) => (
+              <div key={s.label}>
+                <p className="glint-headline text-3xl md:text-4xl text-[--color-ember]">{s.num}</p>
+                <p className="text-white/50 text-xs uppercase tracking-widest mt-1">{s.label}</p>
+              </div>
+            ))}
           </div>
         </div>
+
+        {/* RIGHT: portrait — stretches to full section height */}
+        <div className="relative z-10 hidden lg:block h-full">
+          {/* Ambient glow */}
+          <div className="absolute inset-0 bg-[--color-ember]/10 blur-[80px] rounded-full pointer-events-none" />
+          <div
+            className="relative w-full h-full"
+            style={{ animation: "floatUpDown 3s ease-in-out infinite" }}
+          >
+            <Image
+              src={myPic2}
+              alt="Mahmood Ahmad"
+              fill
+              className="object-cover object-top"
+              priority
+            />
+          </div>
+        </div>
+
       </div>
     </section>
   );

@@ -66,12 +66,9 @@ const NavBar = () => {
           {/* Logo */}
           <div
             onClick={() => handleLinkClick("home")}
-            className="flex items-center gap-2 cursor-pointer shrink-0"
+            className="flex items-center cursor-pointer shrink-0"
           >
-            <Image width={38} height={38} alt="logo" src={logo} />
-            <span className="text-white text-xl font-black tracking-widest uppercase">
-              CognitiveStack<span className="text-[--color-ember]">.</span>
-            </span>
+            <Image width={200} height={30} alt="logo" src={logo} className="w-[220px] h-auto object-contain" />
           </div>
 
           {/* Center nav (desktop) */}
@@ -99,23 +96,7 @@ const NavBar = () => {
             })}
           </ul>
 
-          {/* Right controls */}
-          <div className="hidden md:flex items-center gap-6">
-            <div className="flex items-center gap-2 text-white/80 hover:text-[--color-ember] cursor-pointer transition-colors">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
-                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
-              </svg>
-              <span className="uppercase tracking-wider text-sm">Search</span>
-            </div>
-            <button
-              aria-label="menu"
-              className="w-10 h-10 grid grid-cols-3 gap-[3px] place-content-center text-[--color-ember] hover:text-white transition-colors"
-            >
-              {Array.from({ length: 9 }).map((_, i) => (
-                <span key={i} className="w-1 h-1 bg-current rounded-full" />
-              ))}
-            </button>
-          </div>
+          
 
           {/* Mobile hamburger */}
           <Button

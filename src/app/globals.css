@@ -67,3 +67,10 @@ body::-webkit-scrollbar {
   user-select: none;
   pointer-events: none;
 }
+
+/* Hero image float animation */
+@keyframes floatUpDown {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-18px); }
+  100% { transform: translateY(0px); }
+}
