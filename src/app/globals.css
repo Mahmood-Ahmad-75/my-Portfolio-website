@@ -2,24 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* The new global palette for universal aesthetic switching */
+/* Glint-inspired global palette — pure black + neon green */
 @layer base {
   :root {
     /* Backgrounds & Surfaces */
-    --color-obsidian: #0D0D0D;
-    --color-charcoal: #1A1A1A;
-    --color-stone: #2A2A2A;
-    
-    /* Primary / Secondary Highlights */
-    --color-ember: #FF6B35;
-    --color-amber: #FFB347;
-    --color-spark: #FF8C42;
-    
+    --color-obsidian: #000000;          /* page background (pure black) */
+    --color-charcoal: #0D1815;          /* top bar / raised panels */
+    --color-stone: #1C2924;             /* borders / outline surfaces */
+
+    /* Primary / Accent (Glint green) */
+    --color-ember: #22E24A;             /* primary neon green */
+    --color-amber: #1FC33F;             /* darker green variant */
+    --color-spark: #3EF06A;             /* lighter green variant */
+
     /* Text & Typography */
-    --color-ivory: #F5F5F0;
-    --color-ivory-muted: #A3A3A3;
-    
-    /* Legacy Aliases for uninterrupted components */
+    --color-ivory: #FFFFFF;
+    --color-ivory-muted: #8B9A93;
+
+    /* Legacy Aliases */
     --color-primary: var(--color-ember);
     --color-secondary: var(--color-ivory);
   }
@@ -28,10 +28,42 @@
 body {
   background-color: var(--color-obsidian);
   color: var(--color-ivory);
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
 }
 
 body::-webkit-scrollbar {
   margin: 0;
   padding: 0;
   display: none;
+}
+
+/* Glint headline feel — heavy, tight, uppercase */
+.glint-headline {
+  font-family: 'Archivo Black', 'Plus Jakarta Sans', sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 0.95;
+}
+
+.glint-accent {
+  color: var(--color-ember);
+}
+
+/* Subtle topographic backdrop for hero — thin green radial wave */
+.glint-topo {
+  background-image:
+    radial-gradient(ellipse at 10% 30%, rgba(34, 226, 74, 0.08) 0%, transparent 45%),
+    radial-gradient(ellipse at 90% 60%, rgba(34, 226, 74, 0.05) 0%, transparent 50%);
+}
+
+/* Huge behind-subject watermark text (like GILROY in reference) */
+.glint-watermark {
+  font-family: 'Archivo Black', 'Plus Jakarta Sans', sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: rgba(255, 255, 255, 0.03);
+  text-transform: uppercase;
+  user-select: none;
+  pointer-events: none;
 }

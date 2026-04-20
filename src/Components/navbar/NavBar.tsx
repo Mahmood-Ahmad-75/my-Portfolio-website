@@ -1,23 +1,18 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Button } from "antd";
 import Hamburger from "./HamburgerIcon";
 import MobileMenu from "./MobileMenu";
 import { CloseOutlined } from "@ant-design/icons";
 import { useOutsideClick } from "./useOutsideClick";
-import { react,logo } from "@/assets";
-import './navbar.css'
-const NavBar = () => {
-// styles 
-const selectedStyles =
-"  text-[--color-primary] underline  underline-offset-8 decoration-2 ";
-const styles =
-"nav-link  text-[--color-secondary]      ";
+import { logo } from "@/assets";
+import TopBar from "./TopBar";
 
+const NavBar = () => {
   const [ham, setHam] = useState(false);
   const [router, setRouter] = useState<string>("home");
- 
+
   useEffect(() => {
     const handleScroll = () => {
       const homeSection = document.getElementById("home");
@@ -28,138 +23,120 @@ const styles =
       const ProjectsSection = document.getElementById("projects");
       const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-      if (
-        homeSection &&
-        scrollPosition < homeSection.offsetTop + homeSection.offsetHeight
-      ) {
+      if (homeSection && scrollPosition < homeSection.offsetTop + homeSection.offsetHeight) {
         setRouter("home");
-      } else if (
-        aboutSection &&
-        scrollPosition < aboutSection.offsetTop + aboutSection.offsetHeight
-      ) {
+      } else if (aboutSection && scrollPosition < aboutSection.offsetTop + aboutSection.offsetHeight) {
         setRouter("about");
-      } else if (
-        resumeSection &&
-        scrollPosition < resumeSection.offsetTop + resumeSection.offsetHeight
-      ) {
+      } else if (resumeSection && scrollPosition < resumeSection.offsetTop + resumeSection.offsetHeight) {
         setRouter("resume");
-      } else if (
-        servicesSection &&
-        scrollPosition <
-          servicesSection.offsetTop + servicesSection.offsetHeight
-      ) {
+      } else if (servicesSection && scrollPosition < servicesSection.offsetTop + servicesSection.offsetHeight) {
         setRouter("services");
-      } else if (
-        ProjectsSection &&
-        scrollPosition <
-          ProjectsSection.offsetTop + ProjectsSection.offsetHeight
-      ) {
+      } else if (ProjectsSection && scrollPosition < ProjectsSection.offsetTop + ProjectsSection.offsetHeight) {
         setRouter("projects");
-      } else if (
-        contactSection &&
-        scrollPosition < contactSection.offsetTop + contactSection.offsetHeight
-      ) {
+      } else if (contactSection && scrollPosition < contactSection.offsetTop + contactSection.offsetHeight) {
         setRouter("contact");
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleLinkClick = (id: string) => {
-     setRouter(id);
+    setRouter(id);
     const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
+    if (section) section.scrollIntoView({ behavior: "smooth" });
   };
 
-  const ref = useOutsideClick(() => {
-    setHam(false);
-  });
+  const ref = useOutsideClick(() => setHam(false));
+
+  const navItems = [
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "services", label: "Services" },
+    { id: "projects", label: "Portfolio" },
+    { id: "resume", label: "Resume" },
+    { id: "contact", label: "Contact" },
+  ];
 
   return (
-    <div
-      ref={ref}
-      className="flex z-50 w-full bg-[#1A1A1A] border-b border-[#2A2A2A] fixed shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] flex-col  px-8  justify-center  "
-    >
-      <div className="w-full py-2 flex justify-between gap-5 self-center  h-auto">
-        <div
-          onClick={() => handleLinkClick("home")}
-          className="    h-full flex-0 flex  items-center   gap-1 cursor-pointer"
-        >
-          <Image width={50} alt="company" src={logo} />
-          <h6 className="font-Zen Kaku Gothic Antique  text-[24px] text-white font-black">
-            icmoSoft
-          </h6>{" "}
-        </div>
-        <div className="md:flex   justify-between hidden items-center      ">
-          <div className="md:flex gap-8  hidden items-center   list-none    ">
-            <li
-              onClick={() => handleLinkClick("home")}
-              className={` ${router === "home" ? selectedStyles : styles} 
-             font-sans font-medium xl:text-[18px] text-[15px]`}
-            >
-              Home
-            </li>
+    <div ref={ref} className="fixed top-0 left-0 w-full z-50 flex flex-col">
+      {/* Announcement bar (desktop only) */}
+      <TopBar />
 
-            <li
-              onClick={() => handleLinkClick("about")}
-              className={` ${router === "about" ? selectedStyles : styles} 
-             font-sans font-medium xl:text-[18px] text-[15px]`}
-            >
-              About
-            </li>
-            <li
-              onClick={() => handleLinkClick("resume")}
-              className={` ${router === "resume" ? selectedStyles : styles} 
-             font-sans font-medium xl:text-[18px] text-[15px]`}
-            >
-              Resume
-            </li>
-            <li
-              onClick={() => handleLinkClick("services")}
-              className={` ${router === "services" ? selectedStyles : styles} 
-             font-sans font-medium xl:text-[18px] text-[15px]`}
-            >
-              Services
-            </li>
-            <li
-              onClick={() => handleLinkClick("projects")}
-              className={` ${router === "projects" ? selectedStyles : styles} 
-             font-sans font-medium xl:text-[18px] text-[15px]`}
-            >
-              Projects
-            </li>
-            <li
-              onClick={() => handleLinkClick("contact")}
-              className={` ${router === "contact" ? selectedStyles : styles} 
-             font-sans font-medium xl:text-[18px] text-[15px]`}
-            >
-              Contact me
-            </li>
+      {/* Main nav */}
+      <div className="w-full bg-black border-b border-[#1C2924] px-6 md:px-12">
+        <div className="max-w-[1600px] mx-auto flex items-center justify-between h-20">
+          {/* Logo */}
+          <div
+            onClick={() => handleLinkClick("home")}
+            className="flex items-center gap-2 cursor-pointer shrink-0"
+          >
+            <Image width={38} height={38} alt="logo" src={logo} />
+            <span className="text-white text-xl font-black tracking-widest uppercase">
+              Mahmood<span className="text-[--color-ember]">.</span>
+            </span>
           </div>
+
+          {/* Center nav (desktop) */}
+          <ul className="hidden md:flex items-center gap-10 list-none m-0">
+            {navItems.map((item) => {
+              const active = router === item.id;
+              return (
+                <li
+                  key={item.id}
+                  onClick={() => handleLinkClick(item.id)}
+                  className="relative cursor-pointer py-2"
+                >
+                  <span
+                    className={`uppercase tracking-widest text-sm font-bold transition-colors ${
+                      active ? "text-white" : "text-white/60 hover:text-white"
+                    }`}
+                  >
+                    {item.label}
+                  </span>
+                  {active && (
+                    <span className="absolute left-0 right-0 -bottom-[1px] h-[3px] bg-[--color-ember]" />
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+
+          {/* Right controls */}
+          <div className="hidden md:flex items-center gap-6">
+            <div className="flex items-center gap-2 text-white/80 hover:text-[--color-ember] cursor-pointer transition-colors">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+              </svg>
+              <span className="uppercase tracking-wider text-sm">Search</span>
+            </div>
+            <button
+              aria-label="menu"
+              className="w-10 h-10 grid grid-cols-3 gap-[3px] place-content-center text-[--color-ember] hover:text-white transition-colors"
+            >
+              {Array.from({ length: 9 }).map((_, i) => (
+                <span key={i} className="w-1 h-1 bg-current rounded-full" />
+              ))}
+            </button>
+          </div>
+
+          {/* Mobile hamburger */}
+          <Button
+            type="link"
+            onClick={() => setHam(!ham)}
+            className="md:hidden flex items-center justify-center text-white"
+          >
+            {ham ? <CloseOutlined style={{ color: "#fff" }} /> : <Hamburger />}
+          </Button>
         </div>
-        <Button
-          style={{ color: "black" }}
-          type="link"
-          onClick={() => setHam(!ham)}
-          className="md:hidden flex hover:bg-surface text-[--color-secondary] items-center self-center justify-center  text-white"
-        >
-          {ham ? <CloseOutlined /> : <Hamburger />}
-        </Button>
+
+        {ham && (
+          <div className="md:hidden w-full mt-1 pb-4 bg-black rounded-md">
+            <MobileMenu clickHandler={handleLinkClick} router={router} />
+          </div>
+        )}
       </div>
-      {ham && (
-        <div className="md:hidden  w-full mt-3 bg-surface rounded-md flex items-center justify-center">
-          <MobileMenu clickHandler={handleLinkClick} router={router} />
-        </div>
-      )}
     </div>
   );
 };
