@@ -45,7 +45,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
       {watermark && (
         <span
           aria-hidden
-          className="glint-watermark absolute -top-8 left-0 text-[7rem] md:text-[9rem] lg:text-[11rem] leading-none whitespace-nowrap"
+          className="glint-watermark absolute -top-6 left-0 text-[5rem] md:text-[7rem] lg:text-[8.5rem] leading-none whitespace-nowrap"
         >
           {watermark}
         </span>
@@ -55,14 +55,14 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
         <p className="text-[--color-ember] font-bold tracking-[0.3em] text-sm mb-6 uppercase">
           {label}
         </p>
-        <h2 className="glint-headline text-5xl md:text-6xl xl:text-7xl text-white">
+        <h2 className="glint-headline text-4xl md:text-[60px] leading-[1.05] text-white">
           {titleLead} <span className="glint-accent">{titleAccent}</span>
         </h2>
       </div>
 
-      <div className="flex items-start gap-6 lg:pt-6">
+      <div className="flex items-start gap-6 lg:pt-4">
         <div className="border-l-2 border-[--color-ember] pl-5 flex-1">
-          <p className="text-white/70 text-base md:text-lg leading-relaxed">
+          <p className="text-white/70 text-base md:text-[18px] leading-relaxed">
             {description}
           </p>
         </div>
