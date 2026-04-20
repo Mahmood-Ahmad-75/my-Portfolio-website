@@ -31,13 +31,13 @@ const Experience = () => {
         </p>
 
         <h1 className="text-[--color-primary] font-bold leading-[50px] text-[50px] mb-3">
-          2+ Years Experience
+          Full Stack + AI Engineer
         </h1>
         <h3 className="text-[--color-secondary] font-bold leading-[50px] text-[50px] mb-10">
-          In Mobile Development
+          Web · Mobile · Backend · AI
         </h3>
         <p className="mb-12 w-full sm:text-justify text-center text-light text-[18px] text-[--color-secondary] leading-[25px] text-light">
-          Hey there! I&apos;m <b>Mahmood Ahmad.</b> I&apos;m a React Native Developer specialising in building high-performance cross-platform mobile apps for iOS and Android. With <b>2+ years</b> of hands-on experience, I work with JavaScript, TypeScript, and AI & Agentic AI integrations to deliver impactful mobile solutions.
+          Hey there! I&apos;m <b>Mahmood Ahmad.</b> I build production-grade products across <b>React.js, Next.js, React Native, Node.js, and AI systems</b>. My path: React web interfaces → cross-platform mobile (iOS + Android) → Node.js backends and DevOps on Vercel / Render / Hostinger → <b>AI-integrated engineering</b> with LLMs, speech processing (STS/TTS), same-voice consistency layers, AI agents, and prompt engineering. I treat AI behaviour as a first-class architectural concern — structured outputs, guardrails, and measurable reliability, not demo-grade.
         </p>
         <div className="flex md:flex-row flex-col w-full justify-left mt-5  ">
           <SkillSet />

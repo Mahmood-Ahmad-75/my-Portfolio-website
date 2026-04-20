@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { projectsData } from "../../data/projects";
 
-const categories = ["All", "AI Integration", "Health & Wellness", "Fintech", "Enterprise", "Creative"];
+const categories = ["All", "AI Integration", "Full Stack", "Mobile", "Web", "Health & Wellness", "Fintech", "Enterprise", "Creative"];
 
 const ProjectImages = () => {
   const [activeCategory, setActiveCategory] = useState<string>("All");

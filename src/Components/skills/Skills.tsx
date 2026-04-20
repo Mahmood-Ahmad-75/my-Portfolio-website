@@ -17,14 +17,14 @@ import AOS from "aos";
 const Skills = () => {
   const data: any[] = [
     { name: "React Native", logo: react },
-    { name: "React", logo: react },
+    { name: "React / Next.js", logo: next },
     { name: "TypeScript", logo: typescript },
-    { name: "JavaScript", logo: javascript },
+    { name: "Node.js Backend", logo: javascript },
     { name: "Redux Toolkit", logo: react },
     { name: "Firebase", logo: github },
-    { name: "Git & GitHub", logo: github },
+    { name: "LLM / GPT APIs", logo: javascript },
+    { name: "STS / TTS Voice", logo: javascript },
     { name: "Tailwind CSS", logo: tailwind },
-    { name: "REST APIs", logo: javascript },
   ];
   useEffect(() => {
     AOS.init();

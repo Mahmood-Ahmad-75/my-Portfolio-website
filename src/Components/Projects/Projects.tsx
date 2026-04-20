@@ -10,7 +10,7 @@ const Projects = () => {
             Selected Works
           </h1>
           <p className="font-body text-xl text-on-surface-variant max-w-2xl leading-relaxed">
-            A curated gallery of engineering feats, ranging from specialized healthcare systems to high-performance fintech architectures.
+            Full Stack + AI-integrated case studies across web and mobile — from LLM-powered health coaching and STS voice agents to RBAC enterprise inventory and real-time fintech wallets.
           </p>
         </header>
 

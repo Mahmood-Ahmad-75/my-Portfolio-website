@@ -141,31 +141,147 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
             </div>
         </section>
         
-        {/* Tech Stack & Stats */}
+        {/* Project Types */}
+        <section className="mb-16">
+            <div className="flex flex-wrap gap-3">
+                {project.types.map((t, idx) => (
+                    <span
+                        key={idx}
+                        className="px-4 py-1.5 rounded-full font-label text-xs uppercase tracking-widest bg-primary/10 text-primary border border-primary/30"
+                    >
+                        {t}
+                    </span>
+                ))}
+            </div>
+        </section>
+
+        {/* AI Capabilities */}
+        <section className="mb-24">
+            <h2 className="font-headline text-3xl font-bold mb-12 flex items-center gap-4">
+                AI Capabilities <div className="h-px grow bg-outline-variant/20"></div>
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {project.aiCapabilities.map((cap, idx) => (
+                    <div
+                        key={idx}
+                        className="p-8 rounded-3xl bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 hover:border-primary/50 transition-colors"
+                    >
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+                            <span className="material-symbols-outlined">{cap.icon}</span>
+                        </div>
+                        <h4 className="font-headline text-xl font-bold mb-3">{cap.title}</h4>
+                        <p className="text-on-surface-variant leading-relaxed text-sm">{cap.description}</p>
+                    </div>
+                ))}
+            </div>
+        </section>
+
+        {/* Full Stack Tech Stack */}
         <section className="bg-surface-container-low rounded-[2rem] p-8 md:p-16 mb-24">
-            <div className="grid lg:grid-cols-4 gap-12">
-                <div className="lg:col-span-1">
-                    <h3 className="font-headline text-2xl font-bold mb-6">The Stack</h3>
-                    <ul className="space-y-4 font-label text-sm uppercase tracking-wider text-on-surface-variant">
-                        {project.stack.map((tech, idx) => (
-                           <li key={idx} className="flex items-center gap-3">
-                               <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                               {tech}
-                           </li>
+            <h2 className="font-headline text-3xl font-bold mb-12">Full Stack Architecture</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div className="flex items-center gap-3 mb-5">
+                        <span className="material-symbols-outlined text-primary">dashboard</span>
+                        <h3 className="font-headline text-lg font-bold">Frontend</h3>
+                    </div>
+                    <ul className="space-y-3 font-label text-xs uppercase tracking-wider text-on-surface-variant">
+                        {project.techStack.frontend.map((t, idx) => (
+                            <li key={idx} className="flex items-center gap-3">
+                                <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                {t}
+                            </li>
                         ))}
                     </ul>
                 </div>
-                <div className="lg:col-span-3 grid md:grid-cols-3 gap-8">
-                    {project.stats.map((stat, idx) => (
-                       <div key={idx} className="p-8 rounded-2xl bg-surface-container border border-outline-variant/10 flex flex-col justify-between hover:bg-surface-container-high transition-colors">
-                           <span className="material-symbols-outlined text-primary mb-4">{stat.icon}</span>
-                           <div>
-                               <div className="text-4xl font-bold mb-1 tracking-tighter">{stat.value}</div>
-                               <p className="text-on-surface-variant text-xs font-label uppercase">{stat.label}</p>
-                           </div>
-                       </div>
-                    ))}
+                <div>
+                    <div className="flex items-center gap-3 mb-5">
+                        <span className="material-symbols-outlined text-primary">dns</span>
+                        <h3 className="font-headline text-lg font-bold">Backend</h3>
+                    </div>
+                    <ul className="space-y-3 font-label text-xs uppercase tracking-wider text-on-surface-variant">
+                        {project.techStack.backend.map((t, idx) => (
+                            <li key={idx} className="flex items-center gap-3">
+                                <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                {t}
+                            </li>
+                        ))}
+                    </ul>
                 </div>
+                <div>
+                    <div className="flex items-center gap-3 mb-5">
+                        <span className="material-symbols-outlined text-primary">cloud_sync</span>
+                        <h3 className="font-headline text-lg font-bold">DevOps</h3>
+                    </div>
+                    <ul className="space-y-3 font-label text-xs uppercase tracking-wider text-on-surface-variant">
+                        {project.techStack.devops.map((t, idx) => (
+                            <li key={idx} className="flex items-center gap-3">
+                                <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                {t}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <div>
+                    <div className="flex items-center gap-3 mb-5">
+                        <span className="material-symbols-outlined text-primary">smart_toy</span>
+                        <h3 className="font-headline text-lg font-bold">AI / ML</h3>
+                    </div>
+                    <ul className="space-y-3 font-label text-xs uppercase tracking-wider text-on-surface-variant">
+                        {project.techStack.ai.map((t, idx) => (
+                            <li key={idx} className="flex items-center gap-3">
+                                <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                {t}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        {/* Stats */}
+        <section className="mb-24">
+            <h2 className="font-headline text-3xl font-bold mb-12 flex items-center gap-4">
+                Key Metrics <div className="h-px grow bg-outline-variant/20"></div>
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+                {project.stats.map((stat, idx) => (
+                    <div
+                        key={idx}
+                        className="p-8 rounded-2xl bg-surface-container border border-outline-variant/10 flex flex-col justify-between hover:bg-surface-container-high transition-colors"
+                    >
+                        <span className="material-symbols-outlined text-primary mb-4">{stat.icon}</span>
+                        <div>
+                            <div className="text-4xl font-bold mb-1 tracking-tighter">{stat.value}</div>
+                            <p className="text-on-surface-variant text-xs font-label uppercase">{stat.label}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
+
+        {/* Contribution, Deployment, Outcome */}
+        <section className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-surface-container-low p-10 rounded-3xl">
+                <div className="flex items-center gap-3 mb-5">
+                    <span className="material-symbols-outlined text-primary">engineering</span>
+                    <h3 className="font-headline text-xl font-bold">My Contribution</h3>
+                </div>
+                <p className="text-on-surface-variant text-sm leading-relaxed">{project.contribution}</p>
+            </div>
+            <div className="bg-surface-container-low p-10 rounded-3xl">
+                <div className="flex items-center gap-3 mb-5">
+                    <span className="material-symbols-outlined text-primary">rocket_launch</span>
+                    <h3 className="font-headline text-xl font-bold">Deployment</h3>
+                </div>
+                <p className="text-on-surface-variant text-sm leading-relaxed">{project.deployment}</p>
+            </div>
+            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-10 rounded-3xl border border-primary/20">
+                <div className="flex items-center gap-3 mb-5">
+                    <span className="material-symbols-outlined text-primary">trending_up</span>
+                    <h3 className="font-headline text-xl font-bold text-primary">Impact & Outcome</h3>
+                </div>
+                <p className="text-on-surface-variant text-sm leading-relaxed">{project.outcome}</p>
             </div>
         </section>
       </main>

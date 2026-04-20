@@ -4,7 +4,7 @@ import "./animated.scss";
 import { Button } from "antd";
 import {nextArrow as ArrowDownwardIcon} from '@/assets';
 const AnimatedIntro = () => {
-  const words = ['React Native Developer.', 'Mobile App Developer.', 'iOS & Android Engineer.', 'AI Integration Specialist.', 'Cross-Platform Developer.'];
+  const words = ['Full Stack Developer.', 'React & React Native Engineer.', 'Node.js Backend Developer.', 'AI Integration Engineer.', 'LLM / STS / TTS Specialist.', 'DevOps-Aware Engineer.'];
   let i = 0;
   let offset = 0;
   const len = words.length;
