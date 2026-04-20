@@ -91,7 +91,7 @@ const PricingCard: React.FC<{ tier: Tier }> = ({ tier }) => {
     <div
       className={`relative flex flex-col p-8 md:p-10 transition-transform hover:-translate-y-2 ${
         isFeatured
-          ? "bg-[--color-ember] text-black lg:-my-4 lg:py-14 shadow-[0_0_60px_rgba(34,226,74,0.35)]"
+          ? "bg-[--color-ember] text-black lg:-my-4 lg:py-14 shadow-[0_0_60px_rgba(34,205,112,0.35)]"
           : "bg-[#0D1815] text-white border border-[#1C2924]"
       }`}
     >

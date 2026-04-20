@@ -36,7 +36,7 @@ const Clients = () => {
           <div className="grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 items-start">
             {/* Avatar */}
             <div className="shrink-0">
-              <div className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-2 border-[--color-ember]/40 shadow-[0_0_30px_rgba(34,226,74,0.2)] relative">
+              <div className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-2 border-[--color-ember]/40 shadow-[0_0_30px_rgba(34,205,112,0.2)] relative">
                 <Image
                   src={active.img}
                   alt={active.name}

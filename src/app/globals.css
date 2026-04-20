@@ -11,9 +11,9 @@
     --color-stone: #1C2924;             /* borders / outline surfaces */
 
     /* Primary / Accent (Glint green) */
-    --color-ember: #22E24A;             /* primary neon green */
-    --color-amber: #1FC33F;             /* darker green variant */
-    --color-spark: #3EF06A;             /* lighter green variant */
+    --color-ember: #22CD70;             /* primary neon green */
+    --color-amber: #1AB15F;             /* darker green variant */
+    --color-spark: #3DE088;             /* lighter green variant */
 
     /* Text & Typography */
     --color-ivory: #FFFFFF;
@@ -53,8 +53,8 @@ body::-webkit-scrollbar {
 /* Subtle topographic backdrop for hero — thin green radial wave */
 .glint-topo {
   background-image:
-    radial-gradient(ellipse at 10% 30%, rgba(34, 226, 74, 0.08) 0%, transparent 45%),
-    radial-gradient(ellipse at 90% 60%, rgba(34, 226, 74, 0.05) 0%, transparent 50%);
+    radial-gradient(ellipse at 10% 30%, rgba(34, 205, 112, 0.08) 0%, transparent 45%),
+    radial-gradient(ellipse at 90% 60%, rgba(34, 205, 112, 0.05) 0%, transparent 50%);
 }
 
 /* Huge behind-subject watermark text (like GILROY in reference) */
