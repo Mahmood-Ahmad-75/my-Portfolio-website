@@ -25,17 +25,10 @@ const MobileMenu: React.FC<getProp> = ({ router, clickHandler }) => {
       </li>
       <li
         onClick={() => clickHandler("about")}
-        className={` ${router === "about" ? selectedStyles : styles} 
+        className={` ${router === "about" ? selectedStyles : styles}
              font-sans font-medium xl:text-[18px] text-[15px]`}
       >
         About
-      </li>
-      <li
-        onClick={() => clickHandler("resume")}
-        className={` ${router === "resume" ? selectedStyles : styles} 
-             font-sans font-medium xl:text-[18px] text-[15px]`}
-      >
-        Resume
       </li>
       <li
         onClick={() => clickHandler("services")}

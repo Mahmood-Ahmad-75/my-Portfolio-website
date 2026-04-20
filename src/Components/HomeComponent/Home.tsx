@@ -5,6 +5,7 @@ import NavBar from "../navbar/NavBar";
 import Introduction from "../introduction/Introduction";
 import Skills from "../skills/Skills";
 import Experience from "../about/About";
+import CareerExperience from "../experience/Experience";
 import ExploringMySkills from "../services/Services";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Add the AOS styles
@@ -52,6 +53,7 @@ const Home: React.FC = () => {
         <Experience />
         <Skills />
       </div>
+      <CareerExperience />
       <div id="resume">
         <Resume />
       </div>
