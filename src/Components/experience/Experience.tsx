@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { experienceEntries, skillDials, SkillDial } from "./data";
+import SectionHeader from "../common/SectionHeader";
 
 const SkillCircle: React.FC<{ dial: SkillDial }> = ({ dial }) => {
   const radius = 70;
@@ -53,33 +54,13 @@ const Experience = () => {
       className="relative w-full bg-black py-24 md:py-32 overflow-hidden"
     >
       <div className="max-w-[1600px] mx-auto px-6 md:px-16">
-        {/* Header */}
-        <div className="relative grid lg:grid-cols-2 gap-10 items-start mb-20">
-          {/* Watermark */}
-          <span
-            aria-hidden
-            className="glint-watermark absolute -top-8 left-0 text-[7rem] md:text-[9rem] lg:text-[11rem] leading-none whitespace-nowrap"
-          >
-            MY CAREER
-          </span>
-
-          <div className="relative">
-            <p className="text-[--color-ember] font-bold tracking-[0.3em] text-sm mb-6 uppercase">
-              My Experience
-            </p>
-            <h2 className="glint-headline text-5xl md:text-6xl xl:text-7xl text-white">
-              Experience And <span className="glint-accent">Skill</span>
-            </h2>
-          </div>
-
-          <div className="lg:pt-6">
-            <div className="border-l-2 border-[--color-ember] pl-5">
-              <p className="text-white/70 text-base md:text-lg leading-relaxed">
-                Four years of production engineering across web, mobile, backend, and AI. Each role built on the last — React fundamentals to cross-platform mobile, then Node.js services and DevOps, then LLM / STS / TTS integration in shipped products.
-              </p>
-            </div>
-          </div>
-        </div>
+        <SectionHeader
+          label="My Experience"
+          titleLead="Experience And"
+          titleAccent="Skill"
+          description="Four years of production engineering across web, mobile, backend, and AI. Each role built on the last — React fundamentals to cross-platform mobile, then Node.js services and DevOps, then LLM / STS / TTS integration in shipped products."
+          watermark="MY CAREER"
+        />
 
         {/* Experience cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">

@@ -1,37 +1,20 @@
-import { Button } from "antd";
+"use client";
 import React from "react";
+import SectionHeader from "../common/SectionHeader";
 
 const ExploringMySkills = () => {
   return (
-    <>
-       
-     
-      <div
-        data-aos="fade-up"
-        className="w-full flex justify-center pt-[100px]   px-4 py-2"
-      >
-        <div className="md:w-[650px] w-full text-center  flex flex-col   ">
-          <p className="text-[--color-primary] font-semibold text-[20px ] underline underline-offset-4 tracking-[2px] leading-normal mb-4">
-            SERVICES
-          </p>
-          <div className="flex items-center justify-center mb-5 flex-wrap gap-3">
-            <h1 className="text-[--color-secondary] font-bold leading-[50px] text-[50px] ">
-              See Which 
-            </h1>
-            <h1 className="text-[--color-primary] font-bold leading-[50px] text-[50px]">
-              Services
-            </h1>
-            <h1 className="text-[--color-secondary] font-bold leading-[50px] text-[50px] ">
-              We Offer 
-            </h1>
-          </div>
-
-          <p className="  w-full  text-center text-light text-[18px] text-[--color-secondary] leading-[25px] text-light">
-            I build high-quality, cross-platform mobile apps for iOS & Android — turning your ideas into performant, AI-powered native experiences.
-          </p>
-        </div>
+    <section className="relative w-full bg-black py-24 md:py-32 overflow-hidden">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-16">
+        <SectionHeader
+          label="Services"
+          titleLead="See Which Services"
+          titleAccent="We Offer"
+          description="Full Stack + AI engagements across web, mobile, and backend. I build production-grade iOS/Android apps, Node.js services, and LLM / STS / TTS integrations — turning ideas into measurable shipped products."
+          watermark="SERVICES"
+        />
       </div>
-    </>
+    </section>
   );
 };
 

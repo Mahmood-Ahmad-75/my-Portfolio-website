@@ -6,7 +6,7 @@ import Footer from '../footer/Footer'
 
 const ContactUs = () => {
   return (
-    <div   className='w-full h-auto p-5 bg-[--color-primary] '>
+    <div className='w-full h-auto bg-black pb-16'>
         {/* heading */}
         <ContactUsHeading/>
         <div className='flex md:flex-row w-full flex-col gap-5  justify-center md:mb-[150px] mb-[80px]  mt-[50px]'>

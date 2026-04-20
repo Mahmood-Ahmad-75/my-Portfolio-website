@@ -12,6 +12,7 @@ import "aos/dist/aos.css"; // Add the AOS styles
 import Strategies from "../services/strategies/Strategies";
 import WhyToChooseUs from "../qualitiesSection/WhyToChooseUs";
 import Projects from "../Projects/Projects";
+import Pricing from "../pricing/Pricing";
 import Clients from "../Clients/Clients";
 import ContactUs from "../ContactUs/ContactUs";
 import { Button, FloatButton } from "antd";
@@ -61,6 +62,7 @@ const Home: React.FC = () => {
       </div>
       <div id="projects">
         <Projects />
+        <Pricing />
         <Clients />
       </div>
 

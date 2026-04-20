@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { cards } from "./data";
+import SectionHeader from "../common/SectionHeader";
 
 const Clients = () => {
   const [index, setIndex] = useState(0);
@@ -15,57 +16,15 @@ const Clients = () => {
   return (
     <section className="relative w-full bg-black py-24 md:py-32 overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-16">
-        {/* Header row */}
-        <div className="relative grid lg:grid-cols-2 gap-10 items-start mb-16">
-          {/* Giant watermark behind heading */}
-          <span
-            aria-hidden
-            className="glint-watermark absolute -top-6 left-0 text-[8rem] md:text-[10rem] lg:text-[12rem] leading-none whitespace-nowrap"
-          >
-            TESTIMONIALS
-          </span>
-
-          {/* Left: label + big headline */}
-          <div className="relative">
-            <p className="text-[--color-ember] font-bold tracking-[0.3em] text-sm mb-6 uppercase">
-              Testimonials
-            </p>
-            <h2 className="glint-headline text-5xl md:text-6xl xl:text-7xl text-white">
-              Happy Clients
-              <br />
-              To <span className="glint-accent">Says</span>
-            </h2>
-          </div>
-
-          {/* Right: intro quote + arrows */}
-          <div className="flex items-start gap-6 lg:pt-6">
-            <div className="border-l-2 border-[--color-ember] pl-5 flex-1">
-              <p className="text-white/70 text-base md:text-lg leading-relaxed">
-                Collaborators who have shipped real products with me — from mobile case studies to full-stack AI-integrated platforms. Their words, not mine.
-              </p>
-            </div>
-            <div className="flex gap-3 shrink-0">
-              <button
-                onClick={prev}
-                aria-label="Previous testimonial"
-                className="w-12 h-12 border border-[--color-ember] text-[--color-ember] hover:bg-[--color-ember] hover:text-black flex items-center justify-center transition-colors"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-                  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
-                </svg>
-              </button>
-              <button
-                onClick={next}
-                aria-label="Next testimonial"
-                className="w-12 h-12 border border-[--color-ember] text-[--color-ember] hover:bg-[--color-ember] hover:text-black flex items-center justify-center transition-colors"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-                  <path d="M4 11v2h12.17l-5.59 5.59L12 20l8-8-8-8-1.41 1.41L16.17 11H4z" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
+        <SectionHeader
+          label="Testimonials"
+          titleLead="Happy Clients To"
+          titleAccent="Says"
+          description="Collaborators who have shipped real products with me — from mobile case studies to full-stack AI-integrated platforms. Their words, not mine."
+          watermark="TESTIMONIALS"
+          onPrev={prev}
+          onNext={next}
+        />
 
         {/* Quote body */}
         <div className="relative">
